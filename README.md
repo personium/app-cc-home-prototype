@@ -1,1 +1,2 @@
-# app-cc-home-prototype
+# app-cc-home-prototype  
+This is a prototype.
