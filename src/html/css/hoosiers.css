@@ -14,31 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 /*
  * The followings should be shared among applications.
  */
 
-/* drawer menu */
-$(function () {
-    $('#drawer_btn').on('click', function () {
-      $('#menu-background').show();
-      $('#drawer_menu').animate({
-        width: 'show'
-      }, 300);
-      return false;
-    });
-  
-    $('#menu-background').click(function () {
-      $('#drawer_menu').animate({
-        width: 'hide'
-      }, 300, function () {
-        $('#menu-background').hide();
-        return false;
-      });
-    });
-  
-    $('#drawer_menu').click(function (event) {
-      event.stopPropagation();
-    });
-  });
+@charset "UTF-8";

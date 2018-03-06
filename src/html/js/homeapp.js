@@ -19,26 +19,18 @@
  * The followings should be shared among applications.
  */
 
-/* drawer menu */
+ /* Application & Service Padding Function*/
 $(function () {
-    $('#drawer_btn').on('click', function () {
-      $('#menu-background').show();
-      $('#drawer_menu').animate({
-        width: 'show'
-      }, 300);
-      return false;
-    });
-  
-    $('#menu-background').click(function () {
-      $('#drawer_menu').animate({
-        width: 'hide'
-      }, 300, function () {
-        $('#menu-background').hide();
-        return false;
-      });
-    });
-  
-    $('#drawer_menu').click(function (event) {
-      event.stopPropagation();
-    });
-  });
+    var timer = false;
+    $(window).on('resize', function () {
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            var container_w = $('.app-list').outerWidth(true);
+            var content_w = $('div.app-list div.app-icon:eq(0)').outerWidth(true);
+            var padding = (container_w % content_w) / 2;
+            $('.app-list').css('padding-left', padding);
+        }, 50);
+    }).resize();
+});

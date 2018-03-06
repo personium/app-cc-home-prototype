@@ -1,103 +1,186 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment-with-locales.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
-  <style>
-  body {
-    padding-top: 70px;
-  }
-  input[type="text"] {
-    margin-right: 10px; 
-  }
-  label {
-    margin-right: 20px;
-  }
-  div {
-    margin-bottom: 20px;
-  }
-  span {
-    margin-left: 10px;
-  }
-  </style>
-</head>
-<body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <span>Personium Date Format Converter</span>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div>
-      <h1>Personium Date Format</h1>
-      <input id="dateStr" type=text><button id="convert_time">Convert to time</button>
-    </div>
-    <div>
-      <h1>Human Readable Date Format</h1>
-      <h3>UTC</h3>
-      <div>
-        <span id='utcTime' data-original=""></span>
-      </div>
-      <h3>With locale</h3>
-      <div>
-        <input type=radio id="locale_ja" name="locale" value="ja" checked><label for="locale_ja">Japanese</label>
-        <input type=radio id="locale_en" name="locale" value="en"><label for="locale_en">English</label>
-      </div>
-      <div>
-        <span id="result"></span>
-      </div>
-    </div>
-    <div>
-      For details on date formats, please refer to <a href="http://momentjs.com/" target="blank">MomentJS</a>.
-    </div>
-    <script>
-    $(document).ready(function() {
-      $('#convert_time').click(function(){
-        let momentObj = getMomentObject($('#dateStr').val());
-        $('#utcTime')
-        　　.attr('data-original', $('#dateStr').val())
-        　　.html(momentObj.format());
-        
-        let currentLocale = $('input[type="radio"]:checked').val();
-        let currentDate = momentObj
-          .locale(currentLocale)
-          .format('MMMM Do YYYY, h:mm:ss a');
-        $('#result').html(currentDate);
-      });
-      
-      $('input[type="radio"]').click(function(){
-        let momentObj = getMomentObject($('#utcTime').attr('data-original'));
-        displayDate(momentObj);
-      });
+<!doctype html>
+<html lang="ja">
 
-      let currentDateTime = '/Date(' + moment().format('x') + ')/';
-      $('#dateStr').val(currentDateTime);
-      $('#convert_time').click();
-    });
-    
-    getMomentObject = function(dateString) {
-      let eventObj = moment(dateString);
-      return eventObj;
-    };
-    
-    displayDate = function(momentObj) {
-      let currentLocale = $('input[type="radio"]:checked').val();
-      let currentDate = momentObj
-        .locale(currentLocale)
-        .format('MMMM Do YYYY, h:mm:ss a');
-      $('#result').html(currentDate);
-    };
-    </script>
-  </div>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/personium.css">
+    <link rel="stylesheet" href="./css/homeapp.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="./js/personium.js"></script>
+    <script src="./js/homeapp.js"></script>
+
+    <title>Personium</title>
+</head>
+
+<body>
+
+    <div id="drawer">
+        <div id="drawer_btn">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <div id="menu-background">
+            <div id="drawer_menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="#">プロフィール編集</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#">パスワード変更</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#">アカウント</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#">アプリ管理</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#">言語</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#">ログアウト</a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <span>Personium</span>
+    </header>
+
+    <main>
+        <!--user account infomation-->
+        <div class="user-account">
+            <div class="user-icon"></div>
+            <div class="account-info">
+                <div class="user-name">富士通 太郎</div>
+                <div>
+                    <span>アカウント:</span>
+                    <span class="account">マイアカウント01</span>
+                </div>
+            </div>
+        </div>
+
+        <!--menu-->
+        <div class="menu">
+            <div class="community">
+                <i class="fas fa-users fa-2x"></i>
+                <div>つながり</div>
+            </div>
+            <div class="app-market">
+                <i class="fas fa-shopping-cart fa-2x"></i>
+                <div>Appマーケット</div>
+            </div>
+            <div class="message">
+                <i class="fas fa-envelope fa-2x"></i>
+                <div>メッセージ</div>
+            </div>
+        </div>
+
+        <!--application & service-->
+        <div class="app-and-service">
+            <div class="title">アプリ・サービス</div>
+            <div class="app-list">
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+                <div class="app-icon">
+                    <img class="img-fluid" src="img/parts_ico_keyaki.png" alt="ライフビート">
+                    <div>ライフビート</div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
 </body>
+
 </html>

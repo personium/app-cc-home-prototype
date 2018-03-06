@@ -1,0 +1,151 @@
+/**
+ * Personium
+ * Copyright 2018 FUJITSU LIMITED
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*
+ * The followings should be shared among applications.
+ */
+
+@charset "UTF-8";
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: -moz-linear-gradient(left, #42A4FF, #43D3FF);
+    background: -webkit-gradient(linear, left center, right center, from(#42A4FF), to(#43D3FF));
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 4.0rem;
+    line-height: 4.0rem;
+    flex: 0 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/*-------------------------top(From here)-------------------------*/
+
+/*User account（Overall）*/
+
+.user-account {
+    width: 100%;
+    padding: 15px 0px 15px 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/*User icon*/
+
+.user-icon {
+    background: url(../img/user-icon.png) center center no-repeat;
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+}
+
+/*Account infomation*/
+
+.account-info {
+    margin: 0 20px;
+    display: inline-block;
+    flex: 1;
+}
+
+/*Use name*/
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*Account*/
+
+.account {
+    font-size: 1.2rem;
+}
+
+/*Menu*/
+
+.menu {
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px 10px;
+    flex: 0 0 auto;
+}
+
+.menu>div {
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex: 1 1;
+    flex: 1 1;
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0;
+    text-align: center;
+}
+
+/*Application and Service(Overall)*/
+
+.app-and-service {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/*Application & Service's title*/
+
+.title {
+    background-color: #E5E6EB;
+    height: 3.0rem;
+    line-height: 3.0rem;
+    padding-left: 1.0rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex: 0 0 auto;
+}
+
+/*Application list*/
+
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex: 1 1 auto;
+    overflow: auto;
+    background-color: #F6F7FB;
+}
+
+/*Application icon*/
+
+.app-icon {
+    width: 80px;
+    margin: 20px;
+    text-align: center;
+}
+
+/*-------------------------top page(To here)-------------------------*/
