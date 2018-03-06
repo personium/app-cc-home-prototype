@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <style>
+  body {
+    padding-top: 70px;
+  }
+  input[type="text"] {
+    margin-right: 10px; 
+  }
+  label {
+    margin-right: 20px;
+  }
+  div {
+    margin-bottom: 20px;
+  }
+  span {
+    margin-left: 10px;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <span>Personium Date Format Converter</span>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div>
+      <h1>Personium Date Format</h1>
+      <input id="dateStr" type=text><button id="convert_time">Convert to time</button>
+    </div>
+    <div>
+      <h1>Human Readable Date Format</h1>
+      <h3>UTC</h3>
+      <div>
+        <span id='utcTime' data-original=""></span>
+      </div>
+      <h3>With locale</h3>
+      <div>
+        <input type=radio id="locale_ja" name="locale" value="ja" checked><label for="locale_ja">Japanese</label>
+        <input type=radio id="locale_en" name="locale" value="en"><label for="locale_en">English</label>
+      </div>
+      <div>
+        <span id="result"></span>
+      </div>
+    </div>
+    <div>
+      For details on date formats, please refer to <a href="http://momentjs.com/" target="blank">MomentJS</a>.
+    </div>
+    <script>
+    $(document).ready(function() {
+      $('#convert_time').click(function(){
+        let momentObj = getMomentObject($('#dateStr').val());
+        $('#utcTime')
+        　　.attr('data-original', $('#dateStr').val())
+        　　.html(momentObj.format());
+        
+        let currentLocale = $('input[type="radio"]:checked').val();
+        let currentDate = momentObj
+          .locale(currentLocale)
+          .format('MMMM Do YYYY, h:mm:ss a');
+        $('#result').html(currentDate);
+      });
+      
+      $('input[type="radio"]').click(function(){
+        let momentObj = getMomentObject($('#utcTime').attr('data-original'));
+        displayDate(momentObj);
+      });
+
+      let currentDateTime = '/Date(' + moment().format('x') + ')/';
+      $('#dateStr').val(currentDateTime);
+      $('#convert_time').click();
+    });
+    
+    getMomentObject = function(dateString) {
+      let eventObj = moment(dateString);
+      return eventObj;
+    };
+    
+    displayDate = function(momentObj) {
+      let currentLocale = $('input[type="radio"]:checked').val();
+      let currentDate = momentObj
+        .locale(currentLocale)
+        .format('MMMM Do YYYY, h:mm:ss a');
+      $('#result').html(currentDate);
+    };
+    </script>
+  </div>
+</body>
+</html>
