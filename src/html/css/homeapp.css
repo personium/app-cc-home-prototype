@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /*
  * The followings should be shared among applications.
  */
@@ -22,23 +23,41 @@
 body {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 header {
-    background: -moz-linear-gradient(left, #42A4FF, #43D3FF);
-    background: -webkit-gradient(linear, left center, right center, from(#42A4FF), to(#43D3FF));
-    color: #ffffff;
     text-align: center;
     font-size: 1.5rem;
     height: 4.0rem;
     line-height: 4.0rem;
     flex: 0 0 auto;
+    background-image: url(../img/personium_header_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: -moz-linear-gradient(left, #42A4FF, #43D3FF);
+    background: -webkit-gradient(linear, left center, right center, from(#42A4FF), to(#43D3FF)); */
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#drawer_btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 0;
+}
+
+.icon {
+    height: 30px;
 }
 
 main {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    position: relative;
+    overflow: auto;
 }
 
 /*-------------------------top(From here)-------------------------*/
@@ -62,10 +81,16 @@ main {
     background-size: contain;
     position: relative;
     display: inline-block;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    overflow: hidden;
     border: 1px solid #000;
+}
+
+.user-icon>img {
+    overflow: hidden;
+    object-fit: cover;
 }
 
 /*Account infomation*/
@@ -74,6 +99,7 @@ main {
     margin: 0 20px;
     display: inline-block;
     flex: 1;
+    position: relative;
 }
 
 /*Use name*/
@@ -98,7 +124,7 @@ main {
     flex: 0 0 auto;
 }
 
-.menu>div {
+.menu>a {
     -webkit-flex: 1;
     flex: 1;
     -webkit-flex: 1 1;
@@ -106,6 +132,13 @@ main {
     -webkit-flex: 1 1 0;
     flex: 1 1 0;
     text-align: center;
+    color: #7D7F82;
+}
+
+.menu-ic {
+    width: 1em;
+    font-size: 2em;
+    fill: #7D7F82;
 }
 
 /*Application and Service(Overall)*/
@@ -134,7 +167,7 @@ main {
 .app-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 0px;
     flex: 1 1 auto;
     overflow: auto;
     background-color: #F6F7FB;
@@ -148,4 +181,331 @@ main {
     text-align: center;
 }
 
+.app-icon>img {
+    border-radius: 10px;
+}
+
+.app-icon>div {
+    word-wrap: break-word;
+}
+
 /*-------------------------top page(To here)-------------------------*/
+
+/*-------------------------community page(From here)-------------------------*/
+
+.links-list-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F7F7F7;
+}
+
+.back-btn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4.0rem;
+    padding: 8px 15px;
+    color: #ffffff;
+}
+
+#links {
+    background-color: #ffffff;
+}
+
+#links>ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li.links-list {
+    border-bottom: 1px solid #969696;
+    position: relative;
+    display: flex;
+    height: 80px;
+}
+
+li.links-list>.links-icon {
+    margin: 10px
+}
+
+li.links-list>.links-icon>img {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+li.links-list::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    position: absolute;
+    font-size: 2em;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "\f105";
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+li.links-list:last-child {
+    text-align: center;
+}
+
+/*-------------------------community page(To here)-------------------------*/
+
+/*-------------------------profile page(From here)-------------------------*/
+
+/*Each Profile Block*/
+
+.profile-edit-block {
+    margin: 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #000;
+}
+
+/*Each Profile Block's Title*/
+
+.block-title-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/*Each Profile Block's Icon*/
+
+.profile-ic {
+    width: 1em;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+/*User Pict Icon*/
+
+.user-ic {
+    fill: #FF8800;
+}
+
+.card-ic {
+    fill: #FF1C2B;
+}
+
+.qr-code-ic {
+    fill: #7D4297
+}
+
+/*User Icon(Picture)*/
+
+.user-name-and-icon {
+    padding: 15px 0px;
+    display: flex;
+}
+
+.user-name-and-icon>.user-icon {
+    width: 100px;
+    height: 100px;
+}
+
+/*User Icon (Picture) Above Text*/
+
+.user-name-and-icon>.user-icon>span {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: rgba(2, 2, 2, .5);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 5px 0px;
+}
+
+.user-name-and-icon>.account-info {
+    font-size: 1.2rem;
+    height: 100%;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.user-name-and-icon>.account-info>.account-info-title {
+    margin-bottom: 10px;
+}
+
+/*Edit Button("User Name & Icon" or "Description")*/
+
+.edit-btn {
+    float: right;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    color: #7D7F82;
+    font-size: 1.2rem;
+}
+
+/*User Name Form*/
+
+#user-name-form {
+    font-size: 1.2rem;
+}
+
+/*Descriptio Form*/
+
+.description-text {
+    padding: 15px 0px;
+    font-size: 1.2rem;
+}
+
+#description-form {
+    display: none;
+    font-size: 1.2rem;
+}
+
+#description-form-area {
+    margin: 15px 0px;
+}
+
+/*QR Code*/
+
+.user-qr-code {
+    text-align: center;
+}
+
+/*-------------------------profile page(To here)-------------------------*/
+
+/*-------------------------account page(From here)-------------------------*/
+
+/*Account Management Icon(header)*/
+
+#account_mng_edit_btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 0;
+    position: fixed;
+    right: 12px;
+}
+
+/*Account Management Icon(header)*/
+
+.account_mng_list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+/*Account Management List*/
+
+.account_mng_list>li {
+    overflow: hidden;
+    border-bottom: 1px solid #969696;
+}
+
+.account_mng_list>li>div {
+    display: flex;
+    width: calc(100% + 170px);
+    left: -70px;
+    position: relative;
+    height: 80px;
+}
+
+.account_mng_list>li>div>span {
+    flex: 1;
+    position: relative;
+    margin: 0px 20px;
+    line-height: 80px;
+    font-size: 1.4rem;
+}
+
+/*Account Management List's Right Arrow*/
+
+.account_mng_list>li>div>span::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    position: absolute;
+    font-size: 2em;
+    vertical-align: middle;
+    font-weight: 900;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Account Management List's Edit Icon*/
+
+.account_mng_list>li>div>span.edit-ic::after {
+    content: "";
+    right: 50px;
+    background-image: url('../img/ic_newmessage.svg');
+    height: 40px;
+    width: 40px;
+    transition: all 500ms 0s ease-in-out;
+}
+
+/*Account Management List's Right Arrow Delete*/
+
+.account_mng_list>li>div>span.clear-ic::after {
+    background-image: none;
+}
+
+/*Add New Account(List's Last Line)*/
+
+.account_mng_list>li>div>span.new-account {
+    margin-left: 90px;
+    margin-right: 120px;
+}
+
+.account_mng_list>li>div>span.new-account::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: 900;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-right: 20px;
+}
+
+/*Account Management List's Button*/
+
+.account_mng_list>li>div>button {
+    border: none;
+}
+
+/*Account Delete Button(Circle) & Edit Button*/
+
+.delete-check-btn,
+.account-edit-btn {
+    width: 40px;
+    padding: 0;
+    margin: 0 15px;
+}
+
+/*Account Delete Button(Circle)*/
+
+.delete-check-btn {
+    background: none;
+    color: #C00000;
+}
+
+/*Account Edit Button's Icon*/
+
+.account-edit-ic {
+    width: 40px;
+}
+
+/*Account Delete Button(Square)*/
+
+.account-delete-btn {
+    width: 100px;
+    background-color: #C00000;
+    color: #ffffff;
+    font-size: 1.5rem;
+}

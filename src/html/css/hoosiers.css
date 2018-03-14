@@ -17,5 +17,33 @@
 /*
  * The followings should be shared among applications.
  */
+ 
+ header {
+  background-color: #fafafa;
+  color: #e56700;
+  text-align: center;
+  height: 4.0rem;
+  position: relative;
+}
 
-@charset "UTF-8";
+#drawer_btn {
+  background: none;
+  border: none;
+  color: #5d5d5d;
+  padding: 0;
+  top: 12px;
+}
+
+#sort_btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #5d5d5d;
+  padding: 0;
+}
+
+.icon {
+  height: 22px;
+  width: 22px;

@@ -28,6 +28,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
+    color: #3a3a3a;
 }
 
 html {
@@ -72,19 +73,13 @@ html {
 }
 
 #drawer_btn {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    transition: 0.3s;
-    height: 4.0rem;
-    padding: 16px 20px;
-    color: #ffffff;
+    position: absolute;
+    left: 12px;
 }
 
 #menu-background {
     display: none;
     background-color: rgba(0, 0, 0, 0.45);
-    ;
     opacity: 0;
     position: fixed;
     left: 0;
@@ -106,5 +101,4 @@ html {
 
 .menu-list>a {
     text-decoration: none;
-    color: #3a3a3a;
 }
