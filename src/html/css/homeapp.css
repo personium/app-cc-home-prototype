@@ -35,21 +35,41 @@ header {
     background-image: url(../img/personium_header_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background: -moz-linear-gradient(left, #42A4FF, #43D3FF);
-    background: -webkit-gradient(linear, left center, right center, from(#42A4FF), to(#43D3FF)); */
     color: #ffffff;
     overflow: hidden;
 }
 
-#drawer_btn {
-    background: none;
-    border: none;
+.back-btn,
+#drawer_btn,
+#account_mng_edit_btn {
+    position: fixed;
+    top: 0;
+    height: 4.0rem;
+    padding: 8px 20px;
     color: #ffffff;
-    padding: 0;
 }
 
-.icon {
-    height: 30px;
+.back-btn,
+#drawer_btn,{
+    left: 0;
+}
+
+#drawer_btn,
+#account_mng_edit_btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.header-ic-01 {
+    width: 18px !important;
+}
+
+.header-ic-02 {
+    width: 22px !important;
+}
+
+.header-ic-03 {
+    width: 28px !important;
 }
 
 main {
@@ -78,14 +98,13 @@ main {
 
 .user-icon {
     background: url(../img/user-icon.png) center center no-repeat;
-    background-size: contain;
+    background-size: cover;
     position: relative;
     display: inline-block;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
-    border: 1px solid #000;
 }
 
 .user-icon>img {
@@ -122,6 +141,8 @@ main {
     display: flex;
     padding: 20px 10px;
     flex: 0 0 auto;
+    z-index: 1;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .menu>a {
@@ -176,8 +197,8 @@ main {
 /*Application icon*/
 
 .app-icon {
-    width: 80px;
-    margin: 20px;
+    width: 60px;
+    margin: 15px;
     text-align: center;
 }
 
@@ -185,8 +206,9 @@ main {
     border-radius: 10px;
 }
 
-.app-icon>div {
+.app-name {
     word-wrap: break-word;
+    font-size: 0.8rem;
 }
 
 /*-------------------------top page(To here)-------------------------*/
@@ -202,15 +224,6 @@ main {
     background-color: #F7F7F7;
 }
 
-.back-btn {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4.0rem;
-    padding: 8px 15px;
-    color: #ffffff;
-}
-
 #links {
     background-color: #ffffff;
 }
@@ -222,7 +235,7 @@ main {
 }
 
 li.links-list {
-    border-bottom: 1px solid #969696;
+    border-bottom: 1px solid #999999;
     position: relative;
     display: flex;
     height: 80px;
@@ -268,7 +281,7 @@ li.links-list:last-child {
 .profile-edit-block {
     margin: 20px;
     margin-bottom: 0px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #999999;
 }
 
 /*Each Profile Block's Title*/
@@ -362,7 +375,6 @@ li.links-list:last-child {
 }
 
 #description-form {
-    display: none;
     font-size: 1.2rem;
 }
 
@@ -376,6 +388,11 @@ li.links-list:last-child {
     text-align: center;
 }
 
+.user-cell-url {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
 /*-------------------------profile page(To here)-------------------------*/
 
 /*-------------------------account page(From here)-------------------------*/
@@ -383,11 +400,6 @@ li.links-list:last-child {
 /*Account Management Icon(header)*/
 
 #account_mng_edit_btn {
-    background: none;
-    border: none;
-    color: #ffffff;
-    padding: 0;
-    position: fixed;
     right: 12px;
 }
 
@@ -403,7 +415,7 @@ li.links-list:last-child {
 
 .account_mng_list>li {
     overflow: hidden;
-    border-bottom: 1px solid #969696;
+    border-bottom: 1px solid #999999;
 }
 
 .account_mng_list>li>div {
@@ -428,7 +440,7 @@ li.links-list:last-child {
     font-family: "Font Awesome 5 Free";
     content: "\f105";
     position: absolute;
-    font-size: 2em;
+    font-size: 1.5em;
     vertical-align: middle;
     font-weight: 900;
     right: 0;

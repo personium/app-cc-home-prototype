@@ -59,14 +59,10 @@ $(function () {
         } else if ($(this).attr('id') == 'description-edit-btn') {
             if (!($(this).hasClass('editing')) && !($(this).hasClass('edited'))) {
                 $(this).addClass('editing');
-                $('.description-text').css('display', 'none');
-                $('#description-form').css('display', 'block');
                 $('#description-form-area').focus();
             } else if (($(this).hasClass('editing')) && !($(this).hasClass('edited'))) {
                 $(this).removeClass('editing');
                 $(this).addClass('edited');
-                $('#description-form').css('display', 'none');
-                $('.description-text').css('display', 'block');
                 var edit_ic = $(this).find('.fa-edit');
                 edit_ic.removeClass('fa-edit');
                 edit_ic.addClass('fa-check');
