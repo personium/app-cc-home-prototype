@@ -41,7 +41,7 @@ header {
 
 .back-btn,
 #drawer_btn,
-#account_mng_edit_btn {
+.header-btn-right {
     position: fixed;
     top: 0;
     height: 4.0rem;
@@ -50,12 +50,13 @@ header {
 }
 
 .back-btn,
-#drawer_btn,{
+#drawer_btn,
+    {
     left: 0;
 }
 
 #drawer_btn,
-#account_mng_edit_btn{
+.header-btn-right {
     background-color: rgba(0, 0, 0, 0);
     border: none;
 }
@@ -70,6 +71,32 @@ header {
 
 .header-ic-03 {
     width: 28px !important;
+}
+
+/*User Icon Size*/
+
+.user-icon-small {
+    width: 80px;
+    height: 80px;
+}
+
+.user-icon-middle {
+    width: 100px;
+    height: 100px;
+}
+
+.user-icon-large {
+    width: 120px;
+    height: 120px;
+}
+
+.bg-gray {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F7F7F7;
 }
 
 main {
@@ -101,8 +128,6 @@ main {
     background-size: cover;
     position: relative;
     display: inline-block;
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -119,6 +144,11 @@ main {
     display: inline-block;
     flex: 1;
     position: relative;
+}
+
+.account-info>div {
+    height: 50%;
+    padding: 5px 0px;
 }
 
 /*Use name*/
@@ -211,18 +241,19 @@ main {
     font-size: 0.8rem;
 }
 
+.modal-dialog {
+    top: 50%;
+    -webkit-transform: translate(-0%, -50%) !important;
+    transform: translate(-0%, -50%) !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0;
+}
+
 /*-------------------------top page(To here)-------------------------*/
 
-/*-------------------------community page(From here)-------------------------*/
-
-.links-list-area {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #F7F7F7;
-}
+/*-------------------------links page(From here)-------------------------*/
 
 #links {
     background-color: #ffffff;
@@ -234,29 +265,27 @@ main {
     margin: 0px;
 }
 
-li.links-list {
+.links-list {
     border-bottom: 1px solid #999999;
     position: relative;
     display: flex;
     height: 80px;
 }
 
-li.links-list>.links-icon {
+.links-list>.links-icon {
     margin: 10px
 }
 
-li.links-list>.links-icon>img {
+.links-list>.links-icon>img {
     width: 60px;
     height: 60px;
     overflow: hidden;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid #000;
 }
 
-li.links-list::after {
+.links-list::after {
     font-family: "Font Awesome 5 Free";
-    content: "\f105";
     position: absolute;
     font-size: 2em;
     vertical-align: middle;
@@ -268,11 +297,80 @@ li.links-list::after {
     transform: translate(-50%, -50%);
 }
 
-li.links-list:last-child {
+.links-list>.account-info>.user-name {
+    font-weight: normal;
+}
+
+#links>ul>li:last-child>a>.links-list::after {
+    content: "";
+}
+
+.add-member {
+    font-size: 1.5rem;
+    margin: auto;
+    width: 180px;
     text-align: center;
+    position: relative;
+}
+
+.add-member::after {
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "\f055";
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 /*-------------------------community page(To here)-------------------------*/
+
+/*-------------------------community more detail page(From here)-------------------------*/
+
+.extcell-profile {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #999999;
+}
+
+/*User Profile Description Text*/
+
+.extcell-profile>.user-description,
+.extcell-profile>.user-cell-url {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.extcell-profile>.user-cell-url {
+    margin-bottom: 0px;
+    font-size: 0.9rem;
+}
+
+.extcell-role-list {
+    background-color: #ffffff;
+}
+
+.list-icon-left {
+    margin: auto 15px;
+    width: 60px;
+    text-align: center;
+}
+
+.links-list-text {
+    margin: auto 0;
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.installed-app{
+    padding-left: 90px;
+    color: #D5D5D5;
+}
+
+/*-------------------------community more detail page(To here)-------------------------*/
 
 /*-------------------------profile page(From here)-------------------------*/
 
@@ -318,11 +416,6 @@ li.links-list:last-child {
 .user-name-and-icon {
     padding: 15px 0px;
     display: flex;
-}
-
-.user-name-and-icon>.user-icon {
-    width: 100px;
-    height: 100px;
 }
 
 /*User Icon (Picture) Above Text*/
@@ -399,7 +492,7 @@ li.links-list:last-child {
 
 /*Account Management Icon(header)*/
 
-#account_mng_edit_btn {
+.header-btn-right {
     right: 12px;
 }
 
