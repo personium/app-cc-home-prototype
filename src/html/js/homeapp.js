@@ -33,6 +33,12 @@ $(function () {
             $('.app-list').css('padding-left', padding);
         }, 50);
     }).resize();
+
+    //もう一度ボタンが押された場合
+    $('#logout').on('click', function () {
+        $('#exampleModal').modal('show');        
+    });
+
     /*-------------------------main page(To here)-------------------------*/
 
     /*-------------------------profile page(From here)-------------------------*/

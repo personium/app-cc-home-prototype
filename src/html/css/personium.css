@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /*
  * The followings should be shared among applications.
  */
@@ -35,10 +36,21 @@ html {
     font-size: 16px;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #707070;
+}
+
 /*drawer menu*/
 
 #drawer {
-    z-index: 9999;
+    z-index: 2;
 }
 
 #drawer_header {
@@ -68,7 +80,7 @@ html {
     list-style-type: none;
 }
 
-#drawer_menu>ul>li{
+#drawer_menu>ul>li {
     border-bottom: 1px solid #999999;
     padding-left: 20px;
 }
@@ -90,7 +102,7 @@ html {
     transition: all 0.3s linear 0s;
     width: 100%;
     opacity: 1;
-    z-index: 8888;
+    z-index: 1;
 }
 
 /*drawer menu's list*/
@@ -102,4 +114,42 @@ html {
 
 .menu-list>a {
     text-decoration: none;
+}
+
+/*modal*/
+.modal-open{
+    padding: 0!important;
+}
+.pn-modal-dialog {
+    margin: 0 3.0rem;
+}
+
+.pn-modal-body{
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pn-modal-footer {
+    padding: 0;
+}
+
+.pn-modal-footer>button {
+    width: 50%;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 1.2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #999999;
+    color: #007bff;
+}
+
+.pn-modal-footer>:not(:last-child) {
+    border-right: 1px solid #999999;
+    border-radius: 0 0 0 .3rem;
+}
+
+.pn-modal-footer>:last-child {
+    border-radius: 0 0 .3rem 0;
 }
