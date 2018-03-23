@@ -37,12 +37,13 @@ header {
     background-size: cover;
     color: #ffffff;
     overflow: hidden;
+    position: relative;
 }
 
 .back-btn,
 #drawer_btn,
 .header-btn-right {
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 4.0rem;
     padding: 8px 20px;
@@ -123,8 +124,11 @@ main {
 
 /*User icon*/
 
-.user-icon {
+.my_icon {
     background: url(../img/user-icon.png) center center no-repeat;
+}
+
+.user-icon {
     background-size: cover;
     position: relative;
     display: inline-block;
@@ -333,7 +337,6 @@ main {
 .extcell-profile {
     text-align: center;
     padding: 20px;
-    border-bottom: 1px solid #999999;
 }
 
 /*User Profile Description Text*/
@@ -350,6 +353,7 @@ main {
 }
 
 .extcell-role-list {
+    border-top: 1px solid #999999;
     background-color: #ffffff;
 }
 
@@ -365,7 +369,7 @@ main {
     font-size: 1.2rem;
 }
 
-.installed-app{
+.installed-app {
     padding-left: 90px;
     color: #D5D5D5;
 }
@@ -613,4 +617,35 @@ main {
     background-color: #C00000;
     color: #ffffff;
     font-size: 1.5rem;
+}
+
+/*-------------------------account page(To here)-------------------------*/
+
+/*-------------------------arrow to role page(From here)-------------------------*/
+
+.role-img-area {
+    display: inline-block;
+}
+
+.arrow-to-img {
+    display: table-cell;
+    margin-bottom: 1px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.title-icon{
+    width: 2.0rem;
+    margin: 0.5rem;
+    vertical-align: -0.8em;
+}
+.role-list{
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    padding-left: 20px;
+}
+
+.role-list > ul > li{
+    height: 2.2rem;
+    line-height: 2.2rem;
 }
