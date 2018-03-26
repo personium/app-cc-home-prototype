@@ -100,6 +100,10 @@ header {
     background-color: #F7F7F7;
 }
 
+.no-border{
+    border: 0;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -270,7 +274,6 @@ main {
 }
 
 .links-list {
-    border-bottom: 1px solid #999999;
     position: relative;
     display: flex;
     height: 80px;
@@ -512,7 +515,6 @@ main {
 
 .account_mng_list>li {
     overflow: hidden;
-    border-bottom: 1px solid #999999;
 }
 
 .account_mng_list>li>div {
@@ -634,18 +636,77 @@ main {
     padding: 10px;
 }
 
-.title-icon{
+.title-icon {
     width: 2.0rem;
     margin: 0.5rem;
     vertical-align: -0.8em;
 }
-.role-list{
+
+.role-list {
     background-color: #ffffff;
     font-size: 1.2rem;
+}
+
+.role-list>ul>li {
+    height: 2.2rem;
+    line-height: 2.2rem;
     padding-left: 20px;
 }
 
-.role-list > ul > li{
-    height: 2.2rem;
-    line-height: 2.2rem;
+/*-------------------------arrow to role page(To here)-------------------------*/
+
+/*-------------------------account infomation page(From here)-------------------------*/
+
+.title-large {
+    height: 4.0rem;
+    line-height: 4.0rem;
+}
+
+.title-large>.title-icon {
+    width: 3.0rem;
+    margin: 0.5rem;
+    vertical-align: -1.2em;
+}
+
+.edit-role{
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 3.0rem;
+    background-color: #ffffff;
+}
+
+.edit-role>span{
+    margin-left: 90px;
+    margin-right: 120px;
+
+    flex: 1;
+    position: relative;
+    margin: 0px 20px;
+    line-height: 3.0rem;
+}
+
+.edit-role>span::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: 900;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-right: 20px;
+}
+
+.edit-role>span::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    position: absolute;
+    font-size: 1.5em;
+    vertical-align: middle;
+    font-weight: 900;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
