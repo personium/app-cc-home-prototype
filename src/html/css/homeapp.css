@@ -38,6 +38,8 @@ header {
     color: #ffffff;
     overflow: hidden;
     position: relative;
+    z-index: 2;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .back-btn,
@@ -98,10 +100,6 @@ header {
     bottom: 0;
     left: 0;
     background-color: #F7F7F7;
-}
-
-.no-border{
-    border: 0;
 }
 
 main {
@@ -213,8 +211,8 @@ main {
 
 .title {
     background-color: #E5E6EB;
-    height: 3.0rem;
-    line-height: 3.0rem;
+    height: 40px;
+    line-height: 40px;
     padding-left: 1.0rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -298,7 +296,7 @@ main {
     vertical-align: middle;
     font-weight: 900;
     content: "\f105";
-    right: 0;
+    right: 10px;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -500,7 +498,7 @@ main {
 /*Account Management Icon(header)*/
 
 .header-btn-right {
-    right: 12px;
+    right: 0px;
 }
 
 /*Account Management Icon(header)*/
@@ -519,13 +517,14 @@ main {
 
 .account_mng_list>li>div {
     display: flex;
-    width: calc(100% + 170px);
-    left: -70px;
+    /* width: calc(100% + 170px); */
+    width:100%;
+    /* left: -70px; */
     position: relative;
     height: 80px;
 }
 
-.account_mng_list>li>div>span {
+.account_mng_list>li>div>div {
     flex: 1;
     position: relative;
     margin: 0px 20px;
@@ -535,7 +534,7 @@ main {
 
 /*Account Management List's Right Arrow*/
 
-.account_mng_list>li>div>span::after {
+.account_mng_list>li>div>div::after {
     font-family: "Font Awesome 5 Free";
     content: "\f105";
     position: absolute;
@@ -550,7 +549,7 @@ main {
 
 /*Account Management List's Edit Icon*/
 
-.account_mng_list>li>div>span.edit-ic::after {
+.account_mng_list>li>div>div.edit-ic::after {
     content: "";
     right: 50px;
     background-image: url('../img/ic_newmessage.svg');
@@ -561,18 +560,22 @@ main {
 
 /*Account Management List's Right Arrow Delete*/
 
-.account_mng_list>li>div>span.clear-ic::after {
-    background-image: none;
+/* .account_mng_list>li>div>div.edit-ic::after {
+    content: " ";
+} */
+
+.account_mng_list>li>div>div.clear-ic>a>.account-edit-btn {
+    display: none;
 }
 
 /*Add New Account(List's Last Line)*/
 
-.account_mng_list>li>div>span.new-account {
+.account_mng_list>li>div>div.new-account {
     margin-left: 90px;
     margin-right: 120px;
 }
 
-.account_mng_list>li>div>span.new-account::before {
+.account_mng_list>li>div>div.new-account::before {
     font-family: "Font Awesome 5 Free";
     content: "\f067";
     font-size: 1.2em;
@@ -604,13 +607,31 @@ main {
 .delete-check-btn {
     background: none;
     color: #C00000;
+    flex: 0 0 auto;
+    display: none;
+
 }
 
 /*Account Edit Button's Icon*/
 
+/* .account-edit-btn {
+    height: 100%;
+    position: absolute;
+    right: 50px;
+    background-image: url(../img/ic_newmessage.svg);
+    background-position: center;
+    display: none;
+    background-repeat: no-repeat;
+}
+
+.edit-ic>a>.account-edit-btn {
+    display: inline-block;
+    transition: all 500ms 0s ease-in-out;
+}
+
 .account-edit-ic {
     width: 40px;
-}
+} */
 
 /*Account Delete Button(Square)*/
 
@@ -619,6 +640,8 @@ main {
     background-color: #C00000;
     color: #ffffff;
     font-size: 1.5rem;
+    flex: 0 0 auto;
+    display: none;
 }
 
 /*-------------------------account page(To here)-------------------------*/
@@ -637,9 +660,9 @@ main {
 }
 
 .title-icon {
-    width: 2.0rem;
-    margin: 0.5rem;
-    vertical-align: -0.8em;
+    width: 27px;
+    margin: 0.43rem;
+    vertical-align: -12px;
 }
 
 .role-list {
@@ -648,9 +671,13 @@ main {
 }
 
 .role-list>ul>li {
-    height: 2.2rem;
-    line-height: 2.2rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     padding-left: 20px;
+}
+
+.thin-border>ul>li {
+    border-bottom: 1px solid #f7f7f7;
 }
 
 /*-------------------------arrow to role page(To here)-------------------------*/
@@ -668,7 +695,7 @@ main {
     vertical-align: -1.2em;
 }
 
-.edit-role{
+.edit-role {
     display: flex;
     width: 100%;
     position: relative;
@@ -676,17 +703,19 @@ main {
     background-color: #ffffff;
 }
 
-.edit-role>span{
-    margin-left: 90px;
-    margin-right: 120px;
-
+.edit-role>span {
+    /* padding-left: 90px; */
+    /* padding-right: 120px; */
     flex: 1;
     position: relative;
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
     line-height: 3.0rem;
+    text-align: center;
+    font-size: 1.2rem;
+
 }
 
-.edit-role>span::before {
+/* .edit-role>span::before {
     font-family: "Font Awesome 5 Free";
     content: "\f067";
     font-size: 1.2em;
@@ -696,17 +725,17 @@ main {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin-right: 20px;
-}
+} */
 
-.edit-role>span::after {
+.edit-role>span::before {
     font-family: "Font Awesome 5 Free";
-    content: "\f105";
-    position: absolute;
-    font-size: 1.5em;
-    vertical-align: middle;
+    content: "\f044";
+    font-size: 1.2em;
+    vertical-align: 0px;
     font-weight: 900;
-    right: 0;
+    left: 0;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    padding-right: 10px;
 }

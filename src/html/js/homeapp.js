@@ -87,9 +87,12 @@ $(function () {
             $(this).addClass('editing');
             $('.account_mng_list>li').filter(":last").css('display', 'none');
             $('.account-name').addClass('edit-ic');
-            $('.account_mng_list > li > div').animate({
-                'left': '0px'
-            }, 500);
+            $('.delete-check-btn').animate({
+                'display': 'inline'
+            });
+            // $('.account_mng_list > li > div').animate({
+            //     'left': '0px'
+            // }, 500);
         } else if (($(this).hasClass('editing')) && !($(this).hasClass('edited'))) {
             $(this).removeClass('editing');
             $(this).addClass('edited');
