@@ -78,64 +78,6 @@ $(function () {
     /*-------------------------profile page(To here)-------------------------*/
 
     /*-------------------------account page(From here)-------------------------*/
-    /*Edit Button Clicked(Account Page's Header)*/
-    $('#account_mng_edit_btn').on('click', function () {
-        if (!($(this).hasClass('editing'))) {
-            if (($(this).hasClass('edited'))) {
-                $(this).removeClass('edited');
-            }
-            $(this).addClass('editing');
-            $('.account_mng_list>li').filter(":last").css('display', 'none');
-            $('.account-name').addClass('edit-ic');
-            $('.delete-check-btn').animate({
-                'display': 'inline'
-            });
-            // $('.account_mng_list > li > div').animate({
-            //     'left': '0px'
-            // }, 500);
-        } else if (($(this).hasClass('editing')) && !($(this).hasClass('edited'))) {
-            $(this).removeClass('editing');
-            $(this).addClass('edited');
-            $('.account_mng_list > li > div').animate({
-                'left': '-70px'
-            }, 500);
-            $('.account_mng_list>li').filter(":last").css('display', 'block');
-            $('.account-name').removeClass('edit-ic');
-            $('.account-name').removeClass('clear-ic');
-        }
-    })
 
-    /*Circle Delete Button Clicked(Account Page's List Left)*/
-    $('.delete-check-btn').on('click', function () {
-        $(this).parent().animate({
-            'left': '-170px'
-        }, 500);
-        $(this).next().removeClass('enpitsu');
-        $(this).next().addClass('clear-ic');
-    })
-
-    /*Square Delete Button Clicked(Account Page's List Right)*/
-    $('.account-delete-btn').on('click', function () {
-        $(this).closest('li').animate({
-            width: 'hide',
-            height: 'hide',
-            opacity: 'hide'
-        }, 'slow', function () {
-            $(this).remove();
-        });
-    });
-
-    /*Deletion When clicking an element being checked*/
-    $(".account-name").on("click", function () {
-        if ($(this).hasClass('clear-ic')) {
-            if ($('#account_mng_edit_btn').hasClass('editing')) {
-                $('.account_mng_list > li > div').animate({
-                    'left': '0px'
-                }, 500);
-                $(this).removeClass('clear-ic');
-            }
-
-        }
-    });
     /*-------------------------account page(To here)-------------------------*/
 })

@@ -103,7 +103,7 @@ header {
 }
 
 main {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     flex: 1 1 auto;
     position: relative;
@@ -116,7 +116,7 @@ main {
 
 .user-account {
     width: 100%;
-    padding: 15px 0px 15px 20px;
+    padding: 15px 0px 20px 20px;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -127,7 +127,11 @@ main {
 /*User icon*/
 
 .my_icon {
-    background: url(../img/user-icon.png) center center no-repeat;
+    background: url(../img/user-icon-01.png) center center no-repeat;
+}
+
+.link_icon {
+    background: url(../img/user-icon-02.png) center center no-repeat;
 }
 
 .user-icon {
@@ -146,7 +150,7 @@ main {
 /*Account infomation*/
 
 .account-info {
-    margin: 0 20px;
+    margin: 0 20px 0 10px;
     display: inline-block;
     flex: 1;
     position: relative;
@@ -173,11 +177,11 @@ main {
 /*Menu*/
 
 .menu {
+    position: relative;
     display: -webkit-flex;
     display: flex;
-    padding: 20px 10px;
+    padding: 0px 10px 20px;
     flex: 0 0 auto;
-    z-index: 1;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -202,7 +206,6 @@ main {
 
 .app-and-service {
     display: flex;
-    overflow: hidden;
     flex-direction: column;
     flex: 1 1 auto;
 }
@@ -224,18 +227,20 @@ main {
 .app-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px;
+    padding-top: 15px;
     flex: 1 1 auto;
     overflow: auto;
     background-color: #F6F7FB;
+    align-content: flex-start;
 }
 
 /*Application icon*/
 
 .app-icon {
     width: 60px;
-    margin: 15px;
+    margin: 5px 15px;
     text-align: center;
+    height: 100%;
 }
 
 .app-icon>img {
@@ -245,16 +250,7 @@ main {
 .app-name {
     word-wrap: break-word;
     font-size: 0.8rem;
-}
-
-.modal-dialog {
-    top: 50%;
-    -webkit-transform: translate(-0%, -50%) !important;
-    transform: translate(-0%, -50%) !important;
-}
-
-.modal-backdrop.show {
-    opacity: 0;
+    line-height: 1.0rem;
 }
 
 /*-------------------------top page(To here)-------------------------*/
@@ -274,7 +270,7 @@ main {
 .links-list {
     position: relative;
     display: flex;
-    height: 80px;
+    min-height: 80px;
 }
 
 .links-list>.links-icon {
@@ -345,7 +341,7 @@ main {
 .extcell-profile>.user-description,
 .extcell-profile>.user-cell-url {
     text-align: left;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .extcell-profile>.user-cell-url {
@@ -368,11 +364,6 @@ main {
     margin: auto 0;
     flex: 1;
     font-size: 1.2rem;
-}
-
-.installed-app {
-    padding-left: 90px;
-    color: #D5D5D5;
 }
 
 /*-------------------------community more detail page(To here)-------------------------*/
@@ -501,149 +492,6 @@ main {
     right: 0px;
 }
 
-/*Account Management Icon(header)*/
-
-.account_mng_list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-/*Account Management List*/
-
-.account_mng_list>li {
-    overflow: hidden;
-}
-
-.account_mng_list>li>div {
-    display: flex;
-    /* width: calc(100% + 170px); */
-    width:100%;
-    /* left: -70px; */
-    position: relative;
-    height: 80px;
-}
-
-.account_mng_list>li>div>div {
-    flex: 1;
-    position: relative;
-    margin: 0px 20px;
-    line-height: 80px;
-    font-size: 1.4rem;
-}
-
-/*Account Management List's Right Arrow*/
-
-.account_mng_list>li>div>div::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f105";
-    position: absolute;
-    font-size: 1.5em;
-    vertical-align: middle;
-    font-weight: 900;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-/*Account Management List's Edit Icon*/
-
-.account_mng_list>li>div>div.edit-ic::after {
-    content: "";
-    right: 50px;
-    background-image: url('../img/ic_newmessage.svg');
-    height: 40px;
-    width: 40px;
-    transition: all 500ms 0s ease-in-out;
-}
-
-/*Account Management List's Right Arrow Delete*/
-
-/* .account_mng_list>li>div>div.edit-ic::after {
-    content: " ";
-} */
-
-.account_mng_list>li>div>div.clear-ic>a>.account-edit-btn {
-    display: none;
-}
-
-/*Add New Account(List's Last Line)*/
-
-.account_mng_list>li>div>div.new-account {
-    margin-left: 90px;
-    margin-right: 120px;
-}
-
-.account_mng_list>li>div>div.new-account::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f067";
-    font-size: 1.2em;
-    vertical-align: middle;
-    font-weight: 900;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin-right: 20px;
-}
-
-/*Account Management List's Button*/
-
-.account_mng_list>li>div>button {
-    border: none;
-}
-
-/*Account Delete Button(Circle) & Edit Button*/
-
-.delete-check-btn,
-.account-edit-btn {
-    width: 40px;
-    padding: 0;
-    margin: 0 15px;
-}
-
-/*Account Delete Button(Circle)*/
-
-.delete-check-btn {
-    background: none;
-    color: #C00000;
-    flex: 0 0 auto;
-    display: none;
-
-}
-
-/*Account Edit Button's Icon*/
-
-/* .account-edit-btn {
-    height: 100%;
-    position: absolute;
-    right: 50px;
-    background-image: url(../img/ic_newmessage.svg);
-    background-position: center;
-    display: none;
-    background-repeat: no-repeat;
-}
-
-.edit-ic>a>.account-edit-btn {
-    display: inline-block;
-    transition: all 500ms 0s ease-in-out;
-}
-
-.account-edit-ic {
-    width: 40px;
-} */
-
-/*Account Delete Button(Square)*/
-
-.account-delete-btn {
-    width: 100px;
-    background-color: #C00000;
-    color: #ffffff;
-    font-size: 1.5rem;
-    flex: 0 0 auto;
-    display: none;
-}
-
 /*-------------------------account page(To here)-------------------------*/
 
 /*-------------------------arrow to role page(From here)-------------------------*/
@@ -701,6 +549,7 @@ main {
     position: relative;
     height: 3.0rem;
     background-color: #ffffff;
+    height: 80px;
 }
 
 .edit-role>span {
@@ -709,9 +558,9 @@ main {
     flex: 1;
     position: relative;
     /* margin: 0px 20px; */
-    line-height: 3.0rem;
+    line-height: 80px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
 }
 
@@ -738,4 +587,8 @@ main {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding-right: 10px;
+}
+
+.account-info-footer{
+    border-top: 1px solid #999999;
 }

@@ -19,8 +19,17 @@
  * The followings should be shared among applications.
  */
 
-/* drawer menu */
+
 $(function () {
+
+  drawer_menu();
+  control_slide_list();
+
+  /**
+   * drawer_menu
+   * param:none
+   */
+  function drawer_menu() {
     $('#drawer_btn').on('click', function () {
       $('#menu-background').show();
       $('#drawer_menu').animate({
@@ -28,7 +37,7 @@ $(function () {
       }, 300);
       return false;
     });
-  
+
     $('#menu-background').click(function () {
       $('#drawer_menu').animate({
         width: 'hide'
@@ -37,8 +46,79 @@ $(function () {
         return false;
       });
     });
-  
+
     $('#drawer_menu').click(function (event) {
       event.stopPropagation();
     });
-  });
+  }
+
+  /**
+   * control_slide_list
+   * param: none
+   */
+  function control_slide_list() {
+    var visible_area = $('.slide-list>li');
+    var wide_line = $('.slide-list-line');
+    var line_contents = $('.slide-list-line-contents');
+    var a_tag = $('.slide-list-line-contents>a');
+    var edit_btn = $('.slide-list-edit-btn');
+
+    /*Edit Button Clicked(Page's Header)*/
+    edit_btn.on('click', function () {
+      if (!($(this).hasClass('editing'))) {
+        if (($(this).hasClass('edited'))) {
+          $(this).removeClass('edited');
+        }
+        a_tag.addClass('disabled');
+        $(this).addClass('editing');
+        visible_area.filter(":last").css('display', 'none');
+        line_contents.addClass('edit-ic');
+        wide_line.animate({
+          'left': '0px'
+        }, 500);
+      } else if (($(this).hasClass('editing')) && !($(this).hasClass('edited'))) {
+        $(this).removeClass('editing');
+        $(this).addClass('edited');
+        wide_line.animate({
+          'left': '-70px'
+        }, 500);
+        visible_area.filter(":last").css('display', 'block');
+        line_contents.removeClass('edit-ic');
+        line_contents.removeClass('clear-ic');
+        a_tag.removeClass('disabled');
+      }
+    })
+
+    /*Circle Delete Button Clicked(Page's List Left)*/
+    $('.delete-check-btn').on('click', function () {
+      $(this).parent().animate({
+        'left': '-170px'
+      }, 500);
+      $(this).next().addClass('clear-ic');
+    })
+
+    /*Square Delete Button Clicked(Page's List Right)*/
+    $('.line-delete-btn').on('click', function () {
+      $(this).closest('li').animate({
+        width: 'hide',
+        height: 'hide',
+        opacity: 'hide'
+      }, 'slow', function () {
+        $(this).remove();
+      });
+    });
+
+    /*Deletion When clicking an element being checked*/
+    line_contents.on("click", function () {
+      if ($(this).hasClass('clear-ic')) {
+        if (edit_btn.hasClass('editing')) {
+          wide_line.animate({
+            'left': '0px'
+          }, 500);
+          $(this).removeClass('clear-ic');
+          a_tag.removeClass('disabled');
+        }
+      }
+    });
+  }
+});

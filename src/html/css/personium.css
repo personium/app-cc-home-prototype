@@ -47,7 +47,7 @@ li{
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none!important;
     color: #707070;
 }
 
@@ -137,6 +137,7 @@ a {
 
 .pn-modal-footer {
     padding: 0;
+    border-top: 0;
 }
 
 .pn-modal-footer>button {
@@ -145,15 +146,133 @@ a {
     margin: 0 !important;
     padding: 1.2rem;
     background-color: #ffffff;
-    border-top: 1px solid #999999;
+    border-top: 1px solid rgba(0,0,0,.2);
     color: #007bff;
 }
 
 .pn-modal-footer>:not(:last-child) {
-    border-right: 1px solid #999999;
+    border-right: 1px solid rgba(0,0,0,.2);
     border-radius: 0 0 0 .3rem;
 }
 
 .pn-modal-footer>:last-child {
     border-radius: 0 0 .3rem 0;
+}
+
+.modal-dialog {
+    top: 50%;
+    -webkit-transform: translate(-0%, -50%) !important;
+    transform: translate(-0%, -50%) !important;
+}
+
+.modal-content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.modal-backdrop.show {
+    opacity: 0.3;
+}
+
+.ok-btn{
+    font-weight: bold;
+}
+
+/*slide list*/
+.slide-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.slide-list>li {
+    overflow: hidden;
+}
+
+.slide-list-line {
+    display: flex;
+    width: calc(100% + 170px);
+    left: -70px;
+    position: relative;
+    height: 80px;
+}
+
+.slide-list-line-contents {
+    flex: 1;
+    position: relative;
+    margin: 0px 20px;
+    line-height: 80px;
+    font-size: 1.4rem;
+}
+
+.slide-list-line-contents::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    position: absolute;
+    font-size: 1.5em;
+    vertical-align: middle;
+    font-weight: 900;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.slide-list-line-contents>a{
+    display: block;
+}
+
+.slide-list-line-contents.edit-ic::after {
+    content: "";
+    right: 50px;
+    background-image: url('../img/ic_newmessage.svg');
+    height: 40px;
+    width: 40px;
+    transition: all 500ms 0s ease-in-out;
+}
+
+.clear-ic::after {
+    background-image: none!important;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.slide-list-line-contents.new-account {
+    margin-left: 90px;
+    margin-right: 120px;
+}
+
+.slide-list-line-contents.new-account::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    font-size: 1.2em;
+    vertical-align: middle;
+    font-weight: 900;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-right: 20px;
+}
+
+.slide-list-line>button {
+    border: none;
+}
+
+.line-delete-btn {
+    width: 100px;
+    background-color: #C00000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    flex: 0 0 auto;
+}
+
+.delete-check-btn {
+    background: none;
+    color: #C00000;
+    flex: 0 0 auto;
+    width: 40px;
+    padding: 0;
+    margin: 0 15px;
 }
