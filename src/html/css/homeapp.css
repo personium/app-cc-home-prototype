@@ -108,6 +108,7 @@ main {
     flex: 1 1 auto;
     position: relative;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /*-------------------------top(From here)-------------------------*/
@@ -302,11 +303,6 @@ main {
     font-weight: normal;
 }
 
-/* #links>ul>li:last-child>a>.links-list::after {
-    content: "";
-} */
-
-
 .edit-list {
     display: flex;
     width: 100%;
@@ -341,28 +337,6 @@ main {
     content: "\f055";
 }
 
-
-/* .add-member {
-    font-size: 1.5rem;
-    margin: auto;
-    width: 180px;
-    text-align: center;
-    position: relative;
-} */
-
-/* .add-member::after {
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    font-size: 1.2em;
-    vertical-align: middle;
-    font-weight: 900;
-    content: "\f055";
-    left: 0;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-} */
-
 /*-------------------------community page(To here)-------------------------*/
 
 /*-------------------------community more detail page(From here)-------------------------*/
@@ -377,7 +351,6 @@ main {
 .extcell-profile>.user-description,
 .extcell-profile>.user-cell-url {
     text-align: left;
-    margin-top: 10px;
 }
 
 .extcell-profile>.user-cell-url {
@@ -521,8 +494,8 @@ main {
 .form-control:disabled, .form-control[readonly]{
     background-color: #ffffff;
     border: 0;
+    color: #495057;
 }
-
 /*-------------------------profile page(To here)-------------------------*/
 
 /*-------------------------account page(From here)-------------------------*/
