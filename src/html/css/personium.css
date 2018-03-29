@@ -46,10 +46,17 @@ li{
     border-bottom: 1px solid #999999;
 }
 
-a {
+ul.hover-action > li:hover{
+    background-color: #EEEEEE;
+    color: #707070;
+    text-decoration: none;
+}
+
+a, a:hover {
     text-decoration: none!important;
     color: #707070;
 }
+
 
 /*drawer menu*/
 

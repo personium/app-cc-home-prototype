@@ -302,19 +302,55 @@ main {
     font-weight: normal;
 }
 
-#links>ul>li:last-child>a>.links-list::after {
+/* #links>ul>li:last-child>a>.links-list::after {
     content: "";
+} */
+
+
+.edit-list {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 3.0rem;
+    background-color: #ffffff;
+    height: 80px;
 }
 
-.add-member {
+.edit-list>span {
+    flex: 1;
+    position: relative;
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.edit-list>span::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.2em;
+    vertical-align: 0px;
+    font-weight: 900;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-right: 10px;
+}
+
+.add-member::before {
+    content: "\f055";
+}
+
+
+/* .add-member {
     font-size: 1.5rem;
     margin: auto;
     width: 180px;
     text-align: center;
     position: relative;
-}
+} */
 
-.add-member::after {
+/* .add-member::after {
     font-family: "Font Awesome 5 Free";
     position: absolute;
     font-size: 1.2em;
@@ -325,7 +361,7 @@ main {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
+} */
 
 /*-------------------------community page(To here)-------------------------*/
 
@@ -482,6 +518,11 @@ main {
     font-size: 0.8rem;
 }
 
+.form-control:disabled, .form-control[readonly]{
+    background-color: #ffffff;
+    border: 0;
+}
+
 /*-------------------------profile page(To here)-------------------------*/
 
 /*-------------------------account page(From here)-------------------------*/
@@ -543,50 +584,8 @@ main {
     vertical-align: -1.2em;
 }
 
-.edit-role {
-    display: flex;
-    width: 100%;
-    position: relative;
-    height: 3.0rem;
-    background-color: #ffffff;
-    height: 80px;
-}
-
-.edit-role>span {
-    /* padding-left: 90px; */
-    /* padding-right: 120px; */
-    flex: 1;
-    position: relative;
-    /* margin: 0px 20px; */
-    line-height: 80px;
-    text-align: center;
-    font-size: 1.5rem;
-
-}
-
-/* .edit-role>span::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f067";
-    font-size: 1.2em;
-    vertical-align: middle;
-    font-weight: 900;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin-right: 20px;
-} */
-
-.edit-role>span::before {
-    font-family: "Font Awesome 5 Free";
+.edit-role::before{
     content: "\f044";
-    font-size: 1.2em;
-    vertical-align: 0px;
-    font-weight: 900;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding-right: 10px;
 }
 
 .account-info-footer{

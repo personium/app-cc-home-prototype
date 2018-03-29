@@ -22,14 +22,14 @@
 
 $(function () {
 
-  drawer_menu();
-  control_slide_list();
+  Drawer_Menu();
+  Control_Slide_List();
 
   /**
-   * drawer_menu
+   * Drawer_Menu
    * param:none
    */
-  function drawer_menu() {
+  function Drawer_Menu() {
     $('#drawer_btn').on('click', function () {
       $('#menu-background').show();
       $('#drawer_menu').animate({
@@ -53,10 +53,10 @@ $(function () {
   }
 
   /**
-   * control_slide_list
+   * Control_Slide_List
    * param: none
    */
-  function control_slide_list() {
+  function Control_Slide_List() {
     var visible_area = $('.slide-list>li');
     var wide_line = $('.slide-list-line');
     var line_contents = $('.slide-list-line-contents');
