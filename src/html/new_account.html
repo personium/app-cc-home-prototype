@@ -45,55 +45,51 @@
 
     <main>
         <div class="bg-gray">
-            <div class="app-and-service">
-                <div class="title">
-                    <img class="title-icon" src="img/parts_ico_keyaki.png" alt="ライフビート">
-                    <span>ライフビート</span>
-                </div>
-                <div class="role-list thin-border">
-                    <ul>
-                        <li>管理者</li>
-                        <li>食事ビュー</li>
-                        <li>栄養士</li>
-                    </ul>
-                </div>
+            <div id="links">
+                <ul>
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">名前</span>
+                            </div>
+                            <input type="text" class="form-control account-form form-no-border" placeholder="アカウント名を入力" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
 
-                <div class="title">
-                    <img class="title-icon" src="img/parts_ico_keyaki.png" alt="ライフビート">
-                    <span>ライフビート</span>
-                </div>
-                <div class="role-list thin-border">
-                    <ul>
-                        <li>管理者</li>
-                        <li>食事ビュー</li>
-                        <li>栄養士</li>
-                    </ul>
-                </div>
-                <div class="title">
-                    <img class="title-icon" src="img/parts_ico_keyaki.png" alt="ライフビート">
-                    <span>ユーザーカスタムロール</span>
-                </div>
-                <div class="role-list thin-border">
-                    <ul>
-                        <li>カスタムロール01</li>
-                        <li>カスタムロール02</li>
-                        <li>カスタムロール01</li>
-                        <li>カスタムロール02</li>
-                        <li>カスタムロール01</li>
-                        <li>カスタムロール02</li>
-                        <li>カスタムロール01</li>
-                        <li>カスタムロール02</li>
-                        <li>カスタムロール01</li>
-                        <li>カスタムロール02</li>
-                        <li>カスタムロール01</li>
-                    </ul>
-                </div>
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">パスワード</span>
+                            </div>
+                            <input type="text" class="form-control account-form form-no-border" placeholder="半角英数 6～23文字" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">確認</span>
+                            </div>
+                            <input type="text" class="form-control account-form form-no-border" placeholder="パスワードを再入力" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <div class="edit-list">
+                                <div class="add-setting">新規アカウント</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
     <footer class="account-info-footer">
-        <div class="edit-list">
-            <span class="edit-role">役割を編集</span>
+        <div class="edit-list edit-list-btn-area">
+            <button type="button" class="btn btn-secondary edit-list-btn">キャンセル</button>
+            <button type="button" class="btn btn-primary edit-list-btn">登録</button>
         </div>
     </footer>
 </body>

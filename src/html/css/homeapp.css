@@ -564,3 +564,30 @@ main {
 .account-info-footer{
     border-top: 1px solid #999999;
 }
+
+/*-------------------------account infomation page(To here)-------------------------*/
+
+/*-------------------------add new account page(From here)-------------------------*/
+.form-title{
+    width: 120px;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+}
+
+.account-form{
+    height: 80px;
+    font-size: 1.4rem;
+}
+
+.form-no-border{
+    border: 0;
+}
+
+.edit-list-btn-area{
+    padding: 15px;
+}
+
+.edit-list-btn{
+    width: 50%;
+    margin: 5px;
+}

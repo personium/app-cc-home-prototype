@@ -42,21 +42,21 @@ ul {
     margin: 0px;
 }
 
-li{
+li {
     border-bottom: 1px solid #999999;
 }
 
-ul.hover-action > li:hover{
+ul.hover-action>li:hover {
     background-color: #EEEEEE;
     color: #707070;
     text-decoration: none;
 }
 
-a, a:hover {
-    text-decoration: none!important;
+a,
+a:hover {
+    text-decoration: none !important;
     color: #707070;
 }
-
 
 /*drawer menu*/
 
@@ -128,14 +128,16 @@ a, a:hover {
 }
 
 /*modal*/
-.modal-open{
-    padding: 0!important;
+
+.modal-open {
+    padding: 0 !important;
 }
+
 .pn-modal-dialog {
     margin: 0 auto;
 }
 
-.pn-modal-body{
+.pn-modal-body {
     padding: 1.2rem;
     font-size: 1.3rem;
     font-weight: bold;
@@ -153,12 +155,12 @@ a, a:hover {
     margin: 0 !important;
     padding: 1.2rem;
     background-color: #ffffff;
-    border-top: 1px solid rgba(0,0,0,.2);
+    border-top: 1px solid rgba(0, 0, 0, .2);
     color: #007bff;
 }
 
 .pn-modal-footer>:not(:last-child) {
-    border-right: 1px solid rgba(0,0,0,.2);
+    border-right: 1px solid rgba(0, 0, 0, .2);
     border-radius: 0 0 0 .3rem;
 }
 
@@ -172,7 +174,7 @@ a, a:hover {
     transform: translate(-0%, -50%) !important;
 }
 
-.modal-content{
+.modal-content {
     width: 80%;
     margin: 0 auto;
 }
@@ -181,11 +183,12 @@ a, a:hover {
     opacity: 0.3;
 }
 
-.ok-btn{
+.ok-btn {
     font-weight: bold;
 }
 
 /*slide list*/
+
 .slide-list {
     list-style: none;
     padding: 0;
@@ -204,7 +207,8 @@ a, a:hover {
     height: 80px;
 }
 
-.slide-list-line-contents {
+.slide-list-line-contents,
+.add-setting {
     flex: 1;
     position: relative;
     margin: 0px 20px;
@@ -212,7 +216,8 @@ a, a:hover {
     font-size: 1.4rem;
 }
 
-.slide-list-line-contents::after {
+.slide-list-line-contents::after,
+.add-setting::after {
     font-family: "Font Awesome 5 Free";
     content: "\f105";
     position: absolute;
@@ -225,7 +230,7 @@ a, a:hover {
     transform: translate(-50%, -50%);
 }
 
-.slide-list-line-contents>a{
+.slide-list-line-contents>a {
     display: block;
 }
 
@@ -239,10 +244,10 @@ a, a:hover {
 }
 
 .clear-ic::after {
-    background-image: none!important;
+    background-image: none !important;
 }
 
-.disabled{
+.disabled {
     pointer-events: none;
 }
 
@@ -251,7 +256,8 @@ a, a:hover {
     margin-right: 120px;
 }
 
-.slide-list-line-contents.new-account::before {
+/*Add new setting(List Last Child)*/
+.add-setting::before {
     font-family: "Font Awesome 5 Free";
     content: "\f067";
     font-size: 1.2em;
