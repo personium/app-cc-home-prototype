@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/personium.css">
+    <link rel="stylesheet" href="./css/homeapp.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        FontAwesomeConfig = {
+            searchPseudoElements: true
+        };
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="./js/personium.js"></script>
+    <script src="./js/homeapp.js"></script>
+
+    <title>Personium</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="account.html">
+            <div class="back-btn">
+                <i class="fas fa-angle-left fa-2x header-ic-01"></i>
+            </div>
+        </a>
+        <span>新規アカウント</span>
+    </header>
+
+    <main>
+        <div class="bg-gray">
+            <div id="links">
+                <ul>
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">名前</span>
+                            </div>
+                            <input type="text" class="form-control account-form form-no-border" placeholder="アカウント名を入力" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">パスワード</span>
+                            </div>
+                            <input type="password" class="form-control account-form form-no-border" placeholder="半角英数 6～23文字" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text form-title form-no-border">確認</span>
+                            </div>
+                            <input type="password" class="form-control account-form form-no-border" placeholder="パスワードを再入力" aria-describedby="basic-addon3">
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <div class="edit-list">
+                                <div class="add-setting">役割を追加</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="account-info-footer">
+        <div class="edit-list edit-list-btn-area">
+            <button type="button" class="btn btn-secondary edit-list-btn">キャンセル</button>
+            <button type="button" class="btn btn-primary edit-list-btn font-weight-bold">登録</button>
+        </div>
+    </footer>
+</body>
+
+</html>

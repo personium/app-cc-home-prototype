@@ -37,12 +37,15 @@ header {
     background-size: cover;
     color: #ffffff;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .back-btn,
 #drawer_btn,
 .header-btn-right {
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 4.0rem;
     padding: 8px 20px;
@@ -100,11 +103,12 @@ header {
 }
 
 main {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     flex: 1 1 auto;
     position: relative;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /*-------------------------top(From here)-------------------------*/
@@ -113,7 +117,7 @@ main {
 
 .user-account {
     width: 100%;
-    padding: 15px 0px 15px 30px;
+    padding: 15px 0px 20px 20px;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -123,8 +127,15 @@ main {
 
 /*User icon*/
 
+.my_icon {
+    background: url(../img/user-icon-01.png) center center no-repeat;
+}
+
+.link_icon {
+    background: url(../img/user-icon-02.png) center center no-repeat;
+}
+
 .user-icon {
-    background: url(../img/user-icon.png) center center no-repeat;
     background-size: cover;
     position: relative;
     display: inline-block;
@@ -140,7 +151,7 @@ main {
 /*Account infomation*/
 
 .account-info {
-    margin: 0 20px;
+    margin: 0 20px 0 10px;
     display: inline-block;
     flex: 1;
     position: relative;
@@ -167,11 +178,11 @@ main {
 /*Menu*/
 
 .menu {
+    position: relative;
     display: -webkit-flex;
     display: flex;
-    padding: 20px 10px;
+    padding: 0px 10px 20px;
     flex: 0 0 auto;
-    z-index: 1;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -196,7 +207,6 @@ main {
 
 .app-and-service {
     display: flex;
-    overflow: hidden;
     flex-direction: column;
     flex: 1 1 auto;
 }
@@ -205,8 +215,8 @@ main {
 
 .title {
     background-color: #E5E6EB;
-    height: 3.0rem;
-    line-height: 3.0rem;
+    height: 40px;
+    line-height: 40px;
     padding-left: 1.0rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -218,18 +228,20 @@ main {
 .app-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px;
+    padding-top: 15px;
     flex: 1 1 auto;
     overflow: auto;
     background-color: #F6F7FB;
+    align-content: flex-start;
 }
 
 /*Application icon*/
 
 .app-icon {
     width: 60px;
-    margin: 15px;
+    margin: 5px 15px;
     text-align: center;
+    height: 100%;
 }
 
 .app-icon>img {
@@ -239,16 +251,7 @@ main {
 .app-name {
     word-wrap: break-word;
     font-size: 0.8rem;
-}
-
-.modal-dialog {
-    top: 50%;
-    -webkit-transform: translate(-0%, -50%) !important;
-    transform: translate(-0%, -50%) !important;
-}
-
-.modal-backdrop.show {
-    opacity: 0;
+    line-height: 1.0rem;
 }
 
 /*-------------------------top page(To here)-------------------------*/
@@ -265,18 +268,20 @@ main {
     margin: 0px;
 }
 
-.links-list {
-    border-bottom: 1px solid #999999;
+.links-list,
+.sender {
     position: relative;
     display: flex;
-    height: 80px;
+    min-height: 80px;
 }
 
-.links-list>.links-icon {
+.links-list>.links-icon,
+.sender>.sender-icon {
     margin: 10px
 }
 
-.links-list>.links-icon>img {
+.links-list>.links-icon>img,
+.sender>.sender-icon>img {
     width: 60px;
     height: 60px;
     overflow: hidden;
@@ -291,7 +296,7 @@ main {
     vertical-align: middle;
     font-weight: 900;
     content: "\f105";
-    right: 0;
+    right: 10px;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -301,29 +306,38 @@ main {
     font-weight: normal;
 }
 
-#links>ul>li:last-child>a>.links-list::after {
-    content: "";
-}
-
-.add-member {
-    font-size: 1.5rem;
-    margin: auto;
-    width: 180px;
-    text-align: center;
+.edit-list {
+    display: flex;
+    width: 100%;
     position: relative;
+    height: 3.0rem;
+    background-color: #ffffff;
+    height: 80px;
 }
 
-.add-member::after {
+.edit-list>span {
+    flex: 1;
+    position: relative;
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.edit-list>span::before {
     font-family: "Font Awesome 5 Free";
-    position: absolute;
     font-size: 1.2em;
-    vertical-align: middle;
+    vertical-align: 0px;
     font-weight: 900;
-    content: "\f055";
     left: 0;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    padding-right: 10px;
+}
+
+.add-member::before {
+    content: "\f055";
 }
 
 /*-------------------------community page(To here)-------------------------*/
@@ -333,7 +347,6 @@ main {
 .extcell-profile {
     text-align: center;
     padding: 20px;
-    border-bottom: 1px solid #999999;
 }
 
 /*User Profile Description Text*/
@@ -341,7 +354,6 @@ main {
 .extcell-profile>.user-description,
 .extcell-profile>.user-cell-url {
     text-align: left;
-    margin-top: 15px;
 }
 
 .extcell-profile>.user-cell-url {
@@ -350,6 +362,7 @@ main {
 }
 
 .extcell-role-list {
+    border-top: 1px solid #999999;
     background-color: #ffffff;
 }
 
@@ -363,11 +376,6 @@ main {
     margin: auto 0;
     flex: 1;
     font-size: 1.2rem;
-}
-
-.installed-app{
-    padding-left: 90px;
-    color: #D5D5D5;
 }
 
 /*-------------------------community more detail page(To here)-------------------------*/
@@ -486,6 +494,11 @@ main {
     font-size: 0.8rem;
 }
 
+.form-control:disabled, .form-control[readonly]{
+    background-color: #ffffff;
+    border: 0;
+    color: #495057;
+}
 /*-------------------------profile page(To here)-------------------------*/
 
 /*-------------------------account page(From here)-------------------------*/
@@ -493,124 +506,118 @@ main {
 /*Account Management Icon(header)*/
 
 .header-btn-right {
-    right: 12px;
+    right: 0px;
 }
 
-/*Account Management Icon(header)*/
+/*-------------------------account page(To here)-------------------------*/
 
-.account_mng_list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
+/*-------------------------arrow to role page(From here)-------------------------*/
+
+.role-img-area {
+    display: inline-block;
 }
 
-/*Account Management List*/
-
-.account_mng_list>li {
-    overflow: hidden;
-    border-bottom: 1px solid #999999;
+.arrow-to-img {
+    display: table-cell;
+    margin-bottom: 1px;
+    vertical-align: middle;
+    padding: 10px;
 }
 
-.account_mng_list>li>div {
-    display: flex;
-    width: calc(100% + 170px);
-    left: -70px;
-    position: relative;
+.title-icon {
+    width: 27px;
+    margin: 0.43rem;
+    vertical-align: -12px;
+}
+
+.role-list {
+    background-color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.role-list>ul>li {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 20px;
+}
+
+.thin-border>ul>li {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+/*-------------------------arrow to role page(To here)-------------------------*/
+
+/*-------------------------account infomation page(From here)-------------------------*/
+
+.title-large {
+    height: 4.0rem;
+    line-height: 4.0rem;
+}
+
+.title-large>.title-icon {
+    width: 3.0rem;
+    margin: 0.5rem;
+    vertical-align: -1.2em;
+}
+
+.edit-role::before{
+    content: "\f044";
+}
+
+.account-info-footer{
+    border-top: 1px solid #999999;
+}
+
+/*-------------------------account infomation page(To here)-------------------------*/
+
+/*-------------------------add new account page(From here)-------------------------*/
+.form-title{
+    width: 120px;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+}
+
+.account-form{
     height: 80px;
-}
-
-.account_mng_list>li>div>span {
-    flex: 1;
-    position: relative;
-    margin: 0px 20px;
-    line-height: 80px;
     font-size: 1.4rem;
 }
 
-/*Account Management List's Right Arrow*/
-
-.account_mng_list>li>div>span::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f105";
-    position: absolute;
-    font-size: 1.5em;
-    vertical-align: middle;
-    font-weight: 900;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.form-no-border{
+    border: 0;
 }
 
-/*Account Management List's Edit Icon*/
-
-.account_mng_list>li>div>span.edit-ic::after {
-    content: "";
-    right: 50px;
-    background-image: url('../img/ic_newmessage.svg');
-    height: 40px;
-    width: 40px;
-    transition: all 500ms 0s ease-in-out;
+.edit-list-btn-area{
+    padding: 15px;
 }
 
-/*Account Management List's Right Arrow Delete*/
+.edit-list-btn{
+    width: 50%;
+    margin: 5px;
+}
+/*-------------------------add new account page(To here)-------------------------*/
 
-.account_mng_list>li>div>span.clear-ic::after {
-    background-image: none;
+/*-------------------------incoming message page(From here)-------------------------*/
+
+.incoming_msg{
+    display: flex;
+    flex-direction: column;
 }
 
-/*Add New Account(List's Last Line)*/
-
-.account_mng_list>li>div>span.new-account {
-    margin-left: 90px;
-    margin-right: 120px;
+.sender, .message-title{
+    flex: 0 0 auto;
 }
 
-.account_mng_list>li>div>span.new-account::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f067";
-    font-size: 1.2em;
-    vertical-align: middle;
-    font-weight: 900;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin-right: 20px;
-}
-
-/*Account Management List's Button*/
-
-.account_mng_list>li>div>button {
-    border: none;
-}
-
-/*Account Delete Button(Circle) & Edit Button*/
-
-.delete-check-btn,
-.account-edit-btn {
-    width: 40px;
-    padding: 0;
-    margin: 0 15px;
-}
-
-/*Account Delete Button(Circle)*/
-
-.delete-check-btn {
-    background: none;
-    color: #C00000;
-}
-
-/*Account Edit Button's Icon*/
-
-.account-edit-ic {
-    width: 40px;
-}
-
-/*Account Delete Button(Square)*/
-
-.account-delete-btn {
-    width: 100px;
-    background-color: #C00000;
-    color: #ffffff;
+.message-title{
     font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.message-text{
+    flex: 1 1 auto;
+    overflow: scroll;
+    font-size: 1.2rem;
+    padding: 20px;
 }
