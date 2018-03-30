@@ -268,17 +268,20 @@ main {
     margin: 0px;
 }
 
-.links-list {
+.links-list,
+.sender {
     position: relative;
     display: flex;
     min-height: 80px;
 }
 
-.links-list>.links-icon {
+.links-list>.links-icon,
+.sender>.sender-icon {
     margin: 10px
 }
 
-.links-list>.links-icon>img {
+.links-list>.links-icon>img,
+.sender>.sender-icon>img {
     width: 60px;
     height: 60px;
     overflow: hidden;
@@ -590,4 +593,31 @@ main {
 .edit-list-btn{
     width: 50%;
     margin: 5px;
+}
+/*-------------------------add new account page(To here)-------------------------*/
+
+/*-------------------------incoming message page(From here)-------------------------*/
+
+.incoming_msg{
+    display: flex;
+    flex-direction: column;
+}
+
+.sender, .message-title{
+    flex: 0 0 auto;
+}
+
+.message-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.message-text{
+    flex: 1 1 auto;
+    overflow: scroll;
+    font-size: 1.2rem;
+    padding: 20px;
 }

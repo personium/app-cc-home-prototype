@@ -170,8 +170,8 @@ a:hover {
 
 .modal-dialog {
     top: 50%;
-    -webkit-transform: translate(-0%, -50%) !important;
-    transform: translate(-0%, -50%) !important;
+    -webkit-transform: translate(-0%, -50%, 1px) !important;
+    transform: translate(-0%, -50%, 1px) !important;
 }
 
 .modal-content {
