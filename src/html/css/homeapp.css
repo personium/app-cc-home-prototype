@@ -580,7 +580,6 @@ main {
 
 .msg-menu-text {
     margin: auto 10px auto 0px;
-    /* display: table; */
     flex: 1;
     position: relative;
     font-size: 1.1rem;
@@ -603,7 +602,7 @@ main {
     display: inline-block;
     position: absolute;
     right: 0;
-    top: 4px;
+    top: 2px;
 }
 
 /*-------------------------message page(To here)-------------------------*/
