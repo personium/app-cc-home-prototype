@@ -580,7 +580,7 @@ main {
 
 .msg-menu-text {
     margin: auto 10px auto 0px;
-    display: table;
+    /* display: table; */
     flex: 1;
     position: relative;
     font-size: 1.1rem;
