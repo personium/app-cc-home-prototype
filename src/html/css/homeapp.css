@@ -546,17 +546,11 @@ main {
 /*-------------------------incoming message page(From here)-------------------------*/
 
 .incoming_msg {
-    display: flex;
     flex-direction: column;
 }
 
 .sender::after{
     content: "";
-}
-
-.sender,
-.message-title {
-    flex: 0 0 auto;
 }
 
 .message-title {
@@ -568,8 +562,6 @@ main {
 }
 
 .message-text {
-    flex: 1 1 auto;
-    overflow: scroll;
     font-size: 1.2rem;
     padding: 20px;
 }
@@ -588,18 +580,21 @@ main {
 /*-------------------------message page(From here)-------------------------*/
 
 .msg-menu-text{
-    margin-right: 10px;
-    display: inline-block;
+    margin: auto 10px auto 0px;
+    display: table;
     flex: 1;
     position: relative;
-    line-height: 80px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+}
+
+.msg-menu-text > span{
+    display: table-cell;
 }
 /*-------------------------message page(To here)-------------------------*/
 
 /*-------------------------incoming message list page(From here)-------------------------*/
 .message-list{
-    margin: auto 50px auto 0px;
+    margin: auto 0px;
     flex: 1;
     overflow: hidden;
 }

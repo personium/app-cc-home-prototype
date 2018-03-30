@@ -60,8 +60,7 @@ header {
 }
 
 .icon-text {
-  /* font-size: 12px; */
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .user-name {
@@ -168,7 +167,7 @@ main {
   display: flex;
   flex-direction: row;
   /* font-size: 0.75rem; */
-  font-size: 1.0rem;
+  font-size: 0.9rem;
 }
 
 .etc_area>.date {
@@ -179,12 +178,16 @@ main {
   flex: 0 0 auto;
 }
 
+.evaluation>span{
+  margin-right: 5px;
+}
+
 .etc_area .icon {
   /* height: 14px;
   width: 14px; */
 
-    height: 22px;
-  width: 22px;
+    height: 18px;
+  width: 18px;
 }
 
 .title-area {
@@ -291,8 +294,7 @@ footer>button>.icon {
 }
 
 footer>button>.icon-text {
-  /* font-size: 12px; */
-  font-size: 16px;
+  font-size: 12px;
 }
 
 /* /フッター */
