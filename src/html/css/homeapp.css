@@ -582,7 +582,6 @@ main {
     flex: 1;
     position: relative;
     font-size: 1.1rem;
-    width: 100%;
 }
 
 .msg-menu-text > span{
