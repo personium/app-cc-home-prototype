@@ -71,6 +71,11 @@ header {
     font-size: 1.5rem;
 }
 
+main{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 /*drawer menu*/
 
 #drawer {
