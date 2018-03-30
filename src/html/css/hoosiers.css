@@ -72,11 +72,11 @@ header {
   padding: 0px !important;
 }
 
-.user-info>a>.pn-list::after {
+.user-info>.pn-list::after {
   content: "\f107";
 }
 
-.fa-map-marker {
+.fa-map-marker-alt {
   color: #0A7866;
   vertical-align: -3px !important;
 }
