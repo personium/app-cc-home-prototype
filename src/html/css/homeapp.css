@@ -27,19 +27,11 @@ body {
 }
 
 header {
-    text-align: center;
-    font-size: 1.5rem;
-    height: 4.0rem;
     line-height: 4.0rem;
-    flex: 0 0 auto;
     background-image: url(../img/personium_header_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .back-btn,
@@ -146,20 +138,6 @@ main {
 .user-icon>img {
     overflow: hidden;
     object-fit: cover;
-}
-
-/*Account infomation*/
-
-.account-info {
-    margin: 0 20px 0 10px;
-    display: inline-block;
-    flex: 1;
-    position: relative;
-}
-
-.account-info>div {
-    height: 50%;
-    padding: 5px 0px;
 }
 
 /*Use name*/
@@ -315,10 +293,10 @@ main {
 }
 
 /*User Profile Description Text*/
-
 .extcell-profile>.user-description,
 .extcell-profile>.user-cell-url {
     text-align: left;
+    margin-top: 10px;
 }
 
 .extcell-profile>.user-cell-url {
@@ -615,23 +593,7 @@ main {
     flex: 1;
     position: relative;
     line-height: 80px;
-    font-size: 1.5rem;
-}
-
-.pn-list-batch{
-    width: 50px;
-    margin-right: 50px;
-    line-height: 40px;
-    font-size: 1.5rem;
-    padding: 20px 0px;
-}
-
-.pn-list-batch>span{
-    display: block;
-    text-align: center;
-    background-color: #E9142B;
-    color: #ffffff;
-    border-radius: 20px;
+    font-size: 1.2rem;
 }
 /*-------------------------message page(To here)-------------------------*/
 

@@ -58,6 +58,19 @@ a:hover {
     color: #707070;
 }
 
+header {
+    height: 4.0rem;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
 /*drawer menu*/
 
 #drawer {
@@ -296,6 +309,7 @@ a:hover {
     position: relative;
     display: flex;
     min-height: 80px;
+    padding-right: 50px;
 }
 
 .pn-list>.pn-list-icon {
@@ -331,4 +345,35 @@ a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/*Account infomation*/
+
+.account-info {
+    margin: auto 20px auto 10px;
+    display: inline-block;
+    flex: 1;
+    position: relative;
+}
+
+.account-info>div {
+    height: 50%;
+    padding: 5px 0px;
+}
+
+
+/*batch*/
+.pn-list-batch{
+    line-height: 30px;
+    font-size: 16px;
+    margin: auto 0px;
+}
+
+.pn-list-batch>span{
+    display: inline-block;
+    text-align: center;
+    background-color: #E9142B;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 40px;
 }

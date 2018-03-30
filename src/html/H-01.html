@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -7,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous">
+    crossorigin="anonymous">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/personium.css">
   <link rel="stylesheet" href="./css/hoosiers.css">
@@ -16,9 +17,9 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="./js/personium.js"></script>
 
@@ -29,27 +30,63 @@
   <div id="drawer">
     <div id="menu-background">
       <div id="drawer_menu">
-        <ul>
-          <li class="menu-list">
-            <a href="#">プロフィール編集</a>
+        <ul class="hover-action">
+          <li class="user-info">
+            <div class="pn-list">
+              <div class="pn-list-icon">
+                <img src="img/user-icon-01.png" alt="アイコン">
+              </div>
+              <div class="account-info">
+                <div class="user-name">ペコ太郎</div>
+                <div class="user-status">
+                  <i class="fas fa-map-marker fa-lg"></i>
+                  <span>外出中です</span>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="menu-list">
-            <a href="#">パスワード変更</a>
+            <a href="#">
+              <span>お知らせ</span>
+              <span class="pn-list-batch">
+                <span>99</span>
+              </span>
+            </a>
           </li>
           <li class="menu-list">
-            <a href="#">アカウント</a>
+            <a href="#">
+              <span>履歴</span>
+            </a>
           </li>
           <li class="menu-list">
-            <a href="#">アプリ管理</a>
+            <a href="#">
+              <span>私の同意履歴</span>
+            </a>
           </li>
           <li class="menu-list">
-            <a href="#">言語</a>
+            <a href="#">
+              <span>私の情報の開示先</span>
+            </a>
           </li>
           <li class="menu-list">
-            <a href="#">ログアウト</a>
+            <a href="#">
+              <span>開示中の私の情報</span>
+            </a>
           </li>
           <li class="menu-list">
-            <a href="#"></a>
+            <a href="#">
+              <span>私の情報の参照履歴</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="#">
+              <span>捜査支援する(NFC)</span>
+            </a>
+          </li>
+          <li class="menu-list">
+            <a href="#">
+              <span>データお引越しa</span>
+            </a>
           </li>
         </ul>
       </div>
