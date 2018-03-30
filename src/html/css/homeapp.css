@@ -594,6 +594,11 @@ main {
     font-size: 1.5rem;
 }
 
+.msg-menu-text-area{
+    width: 100%;
+    position: relative;
+}
+
 .msg-list-batch {
     display: inline-block;
     position: absolute;
