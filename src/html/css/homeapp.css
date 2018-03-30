@@ -268,41 +268,7 @@ main {
     margin: 0px;
 }
 
-.links-list,
-.sender {
-    position: relative;
-    display: flex;
-    min-height: 80px;
-}
-
-.links-list>.links-icon,
-.sender>.sender-icon {
-    margin: 10px
-}
-
-.links-list>.links-icon>img,
-.sender>.sender-icon>img {
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.links-list::after {
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    font-size: 2em;
-    vertical-align: middle;
-    font-weight: 900;
-    content: "\f105";
-    right: 10px;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.links-list>.account-info>.user-name {
+.pn-list>.account-info>.user-name {
     font-weight: normal;
 }
 
@@ -321,7 +287,6 @@ main {
     line-height: 80px;
     text-align: center;
     font-size: 1.5rem;
-
 }
 
 .edit-list>span::before {
@@ -372,7 +337,7 @@ main {
     text-align: center;
 }
 
-.links-list-text {
+.pn-list-text {
     margin: auto 0;
     flex: 1;
     font-size: 1.2rem;
@@ -494,11 +459,13 @@ main {
     font-size: 0.8rem;
 }
 
-.form-control:disabled, .form-control[readonly]{
+.form-control:disabled,
+.form-control[readonly] {
     background-color: #ffffff;
     border: 0;
     color: #495057;
 }
+
 /*-------------------------profile page(To here)-------------------------*/
 
 /*-------------------------account page(From here)-------------------------*/
@@ -560,54 +527,61 @@ main {
     vertical-align: -1.2em;
 }
 
-.edit-role::before{
+.edit-role::before {
     content: "\f044";
 }
 
-.account-info-footer{
+.account-info-footer {
     border-top: 1px solid #999999;
 }
 
 /*-------------------------account infomation page(To here)-------------------------*/
 
 /*-------------------------add new account page(From here)-------------------------*/
-.form-title{
+
+.form-title {
     width: 120px;
     font-size: 1.4rem;
     background-color: #ffffff;
 }
 
-.account-form{
+.account-form {
     height: 80px;
     font-size: 1.4rem;
 }
 
-.form-no-border{
-    border: 0;
+.form-no-border {
+    border: 0!important;
 }
 
-.edit-list-btn-area{
+.footer-btn-area {
     padding: 15px;
 }
 
-.edit-list-btn{
+.footer-btn {
     width: 50%;
     margin: 5px;
 }
+
 /*-------------------------add new account page(To here)-------------------------*/
 
 /*-------------------------incoming message page(From here)-------------------------*/
 
-.incoming_msg{
+.incoming_msg {
     display: flex;
     flex-direction: column;
 }
 
-.sender, .message-title{
+.sender::after{
+    content: "";
+}
+
+.sender,
+.message-title {
     flex: 0 0 auto;
 }
 
-.message-title{
+.message-title {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 20px;
@@ -615,9 +589,73 @@ main {
     border-bottom: 1px solid;
 }
 
-.message-text{
+.message-text {
     flex: 1 1 auto;
     overflow: scroll;
     font-size: 1.2rem;
     padding: 20px;
+}
+
+.replay-btn-area {
+    padding: 5px 90px;
+}
+
+.replay-btn-area>button {
+    border: 0;
+    background-color: #ffffff;
+    color: #707070;
+}
+/*-------------------------incoming message page(To here)-------------------------*/
+
+/*-------------------------message page(From here)-------------------------*/
+
+.msg-menu-text{
+    margin-right: 10px;
+    display: inline-block;
+    flex: 1;
+    position: relative;
+    line-height: 80px;
+    font-size: 1.5rem;
+}
+
+.pn-list-batch{
+    width: 50px;
+    margin-right: 50px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    padding: 20px 0px;
+}
+
+.pn-list-batch>span{
+    display: block;
+    text-align: center;
+    background-color: #E9142B;
+    color: #ffffff;
+    border-radius: 20px;
+}
+/*-------------------------message page(To here)-------------------------*/
+
+/*-------------------------incoming message list page(From here)-------------------------*/
+.message-list{
+    margin: auto 50px auto 0px;
+    flex: 1;
+    overflow: hidden;
+}
+.message-list-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.received-info{
+    position: relative;
+    width: 100%;
+    font-size: 1.0rem;
+}
+.received-date{
+    position: absolute;
+    right: 0;
+}
+
+.received-info,.message-list-text{
+    font-size: 0.85rem;
 }

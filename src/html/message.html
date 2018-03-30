@@ -35,62 +35,70 @@
 <body>
 
     <header>
-        <a href="account.html">
+        <a href="main.html">
             <div class="back-btn">
                 <i class="fas fa-angle-left fa-2x header-ic-01"></i>
             </div>
         </a>
-        <span>新規アカウント</span>
+        <span>メッセージ</span>
     </header>
 
     <main>
+        <!--user account infomation-->
         <div class="bg-gray">
             <div id="links">
-                <ul>
+                <ul class="hover-action">
                     <li>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text form-title form-no-border">名前</span>
-                            </div>
-                            <input type="text" class="form-control account-form form-no-border" placeholder="アカウント名を入力" aria-describedby="basic-addon3">
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text form-title form-no-border">パスワード</span>
-                            </div>
-                            <input type="password" class="form-control account-form form-no-border" placeholder="半角英数 6～23文字" aria-describedby="basic-addon3">
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text form-title form-no-border">確認</span>
-                            </div>
-                            <input type="password" class="form-control account-form form-no-border" placeholder="パスワードを再入力" aria-describedby="basic-addon3">
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <a href="#">
-                            <div class="edit-list">
-                                <div class="add-setting">役割を追加</div>
+                        <a href="incoming_message_list.html">
+                            <div class="pn-list">
+                                <div class="pn-list-icon-02">
+                                    <i class="far fa-envelope fa-3x"></i>
+                                </div>
+                                <div class="msg-menu-text">
+                                    受信メッセージ
+                                </div>
+                                <div class="pn-list-batch">
+                                    <span>99</span>
+                                </div>
                             </div>
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <div class="pn-list">
+                                <div class="pn-list-icon-02">
+                                    <i class="far fa-paper-plane fa-3x"></i>
+                                </div>
+                                <div class="msg-menu-text">
+                                    送信済みメッセージ
+                                </div>
+                                <div class="pn-list-batch">
+                                    <span>99</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="pn-list">
+                                <div class="pn-list-icon-02">
+                                    <i class="fas fa-pencil-alt fa-3x"></i>
+                                </div>
+                                <div class="msg-menu-text">
+                                    メッセージ作成
+                                </div>
+                                <div class="pn-list-batch">
+                                    <span>99</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </main>
-    <footer class="account-info-footer">
-        <div class="edit-list footer-btn-area">
-            <button type="button" class="btn btn-secondary footer-btn">キャンセル</button>
-            <button type="button" class="btn btn-primary footer-btn font-weight-bold">登録</button>
-        </div>
+    <footer>
     </footer>
 </body>
 
