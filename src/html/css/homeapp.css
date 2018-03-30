@@ -581,11 +581,16 @@ main {
     display: table;
     flex: 1;
     position: relative;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
+    width: 100%;
 }
 
 .msg-menu-text > span{
     display: table-cell;
+}
+
+.msg-list-icon{
+    font-size: 1.5rem;
 }
 /*-------------------------message page(To here)-------------------------*/
 
