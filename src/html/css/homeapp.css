@@ -290,6 +290,7 @@ main {
 }
 
 /*User Profile Description Text*/
+
 .extcell-profile>.user-description,
 .extcell-profile>.user-cell-url {
     text-align: left;
@@ -526,7 +527,7 @@ main {
 }
 
 .form-no-border {
-    border: 0!important;
+    border: 0 !important;
 }
 
 .footer-btn-area {
@@ -546,7 +547,7 @@ main {
     flex-direction: column;
 }
 
-.sender::after{
+.sender::after {
     content: "";
 }
 
@@ -572,11 +573,12 @@ main {
     background-color: #ffffff;
     color: #707070;
 }
+
 /*-------------------------incoming message page(To here)-------------------------*/
 
 /*-------------------------message page(From here)-------------------------*/
 
-.msg-menu-text{
+.msg-menu-text {
     margin: auto 10px auto 0px;
     display: table;
     flex: 1;
@@ -584,36 +586,48 @@ main {
     font-size: 1.1rem;
 }
 
-.msg-menu-text > span{
+.msg-menu-text>span {
     display: table-cell;
 }
 
-.msg-list-icon{
+.msg-list-icon {
     font-size: 1.5rem;
 }
+
+.msg-list-batch {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+
 /*-------------------------message page(To here)-------------------------*/
 
 /*-------------------------incoming message list page(From here)-------------------------*/
-.message-list{
+
+.message-list {
     margin: auto 0px;
     flex: 1;
     overflow: hidden;
 }
-.message-list-title{
+
+.message-list-title {
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-.received-info{
+.received-info {
     position: relative;
     width: 100%;
     font-size: 1.0rem;
 }
-.received-date{
+
+.received-date {
     position: absolute;
     right: 0;
 }
 
-.received-info,.message-list-text{
+.received-info,
+.message-list-text {
     font-size: 0.85rem;
 }
