@@ -260,6 +260,8 @@ footer {
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
   border-radius: 1px;
   z-index: 3;
 }
@@ -335,7 +337,7 @@ footer>button>.icon-text {
   font-weight: bold;
 }
 
-.news-footer-btn::before{
+.news-footer-btn::before {
   font-family: "Font Awesome 5 Free";
   font-size: 1.2em;
   vertical-align: 0px;
@@ -347,15 +349,15 @@ footer>button>.icon-text {
   padding-right: 10px;
 }
 
-.news-star-btn::before{
+.news-star-btn::before {
   content: "\f005";
 }
 
-.news-calendar-btn::before{
+.news-calendar-btn::before {
   content: "\f274";
 }
 
-.news-footer-btn.clicked{
+.news-footer-btn.clicked {
   color: #ffffff;
   background-color: #3B73B7;
   border: 1px solid #3B73B7;
