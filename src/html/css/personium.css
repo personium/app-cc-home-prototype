@@ -76,6 +76,13 @@ main {
     -webkit-overflow-scrolling: touch;
 }
 
+/*personium common button*/
+
+.pn-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 /*drawer menu*/
 
 #drawer {
@@ -174,7 +181,6 @@ main {
     color: #2978FF;
 }
 
-
 /*drawer menu's list*/
 
 .menu-list {
@@ -244,6 +250,12 @@ main {
 
 .ok-btn {
     font-weight: bold;
+}
+
+/*single button dialog*/
+
+.single-btn-modal>.modal-dialog>.modal-content>.pn-modal-footer>button {
+    width: 100%;
 }
 
 /*slide list*/
@@ -423,4 +435,54 @@ main {
     color: #ffffff;
     border-radius: 20px;
     width: 30px;
+}
+
+/*search box area*/
+
+.pn-search-box {
+    padding: 10px 0px;
+    border-bottom: 1px solid #999999;
+}
+
+.pn-search-box>.input-group>input {
+    border-radius: 10px !important;
+}
+
+.pn-search-title {
+    width: 80px;
+    display: inline-flex;
+}
+
+.pn-search-title>span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+.pn-search-btn {
+    width: 60px;
+    color: #5D5D5D;
+}
+
+.pn-search-btn>.fa-search {
+    width: 25px;
+}
+
+/*check mark on the icon*/
+.pn-icon-check{
+    width: 25px;
+    height: 25px;
+    background-color: #15A14E;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%;  
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Footer Button*/
+.footer-btn {
+    width: 50%;
+    margin: 5px;
 }

@@ -45,16 +45,14 @@ header {
 }
 
 .back-btn,
-#drawer_btn,
-    {
+#drawer_btn {
     left: 0;
 }
 
-#drawer_btn,
-.header-btn-right {
+/* .header-btn-right {
     background-color: rgba(0, 0, 0, 0);
     border: none;
-}
+} */
 
 .header-ic-01 {
     width: 18px !important;
@@ -532,11 +530,6 @@ main {
 
 .footer-btn-area {
     padding: 15px;
-}
-
-.footer-btn {
-    width: 50%;
-    margin: 5px;
 }
 
 /*-------------------------add new account page(To here)-------------------------*/

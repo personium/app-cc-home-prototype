@@ -25,6 +25,7 @@ $(function () {
   Drawer_Menu();
   Control_Slide_List();
   Sort_Menu();
+  Control_Dialog()
 
   /**
    * Drawer_Menu
@@ -79,7 +80,7 @@ $(function () {
       event.stopPropagation();
     });
 
-    $('.sort-menu-list').click(function(event){
+    $('.sort-menu-list').click(function (event) {
       $('#sort-menu').find('.checked').removeClass('checked');
       $(this).addClass('checked');
     });
@@ -154,4 +155,21 @@ $(function () {
       }
     });
   }
+
+  /**
+   * Control_Dialog
+   * param:none
+   */
+  function Control_Dialog() {
+    //clicked logout button
+    $('#logout').on('click', function () {
+      $('.double-btn-modal').modal('show');
+    });
+
+    //single button modal
+    $('.pn-single-modal').on('click', function () {
+      $('.single-btn-modal').modal('show');
+    });
+  }
+
 });

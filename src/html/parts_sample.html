@@ -34,13 +34,26 @@
 
 <body>
 
+    <div class="modal fade single-btn-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog pn-modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body pn-modal-body">
+                    コメント
+                </div>
+                <div class="modal-footer pn-modal-footer">
+                    <button type="button" class="btn ok-btn" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
-        <a href="main.html">
+        <a href="#">
             <div class="back-btn pn-btn">
                 <i class="fas fa-angle-left fa-2x header-ic-01"></i>
             </div>
         </a>
-        <span>つながり</span>
+        <span>パーツサンプル</span>
     </header>
 
     <main>
@@ -48,38 +61,43 @@
         <div class="bg-gray">
             <div id="links">
                 <ul class="hover-action">
-                    <li>
-                        <a href="links_02.html">
-                            <div class="pn-list">
-                                <div class="pn-list-icon">
-                                    <img src="img/user-icon-02.png" alt="アイコン">
-                                </div>
-                                <div class="account-info">
-                                    <div class="user-name">富士通 花子</div>
-                                    <div>
-                                        <span>登録日 </span>
-                                        <span>2018/01/23</span>
-                                    </div>
-                                </div>
+                    <!--search box-->
+                    <div class="pn-search-box">
+                        <div class="input-group">
+                            <div class="pn-search-title">
+                                <span>検索</span>
                             </div>
-                        </a>
+                            <input type="text" class="form-control">
+                            <button class="pn-btn pn-search-btn">
+                                <i class="fas fa-search fa-2x"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!--single button dialog-->
+                    <li class="pn-single-modal">
+                        <div class="pn-list" style="line-height: 80px; padding-left: 20px;">
+                            ボタン1つのみのダイアログ
+                        </div>
                     </li>
 
                     <li>
-                        <a href="links_02.html">
-                            <div class="pn-list">
-                                <div class="pn-list-icon">
-                                    <img src="img/user-icon-02.png" alt="アイコン">
+                        <div class="pn-list">
+                            <div class="pn-list-icon">
+                                <div class="pn-icon-check">
+                                    <i class="fas fa-check"></i>
                                 </div>
-                                <div class="account-info">
-                                    <div class="user-name">さとう</div>
-                                    <div>
-                                        <span>登録日 </span>
-                                        <span>2018/01/23</span>
-                                    </div>
+                                <img src="img/user-icon-02.png" alt="アイコン">
+                            </div>
+                            <div class="account-info">
+                                <div class="user-name">アイコン上にチェックマーク</div>
+                                <div>
+                                    <span>登録日 </span>
+                                    <span>2018/01/23</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+
                     </li>
                     <li>
                         <a href="links_02.html">
