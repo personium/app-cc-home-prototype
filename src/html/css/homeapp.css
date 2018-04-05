@@ -34,25 +34,16 @@ header {
     color: #ffffff;
 }
 
-.back-btn,
+.pn-back-btn,
 #drawer_btn,
 .header-btn-right {
-    position: absolute;
-    top: 0;
-    height: 4.0rem;
-    padding: 8px 20px;
     color: #ffffff;
 }
 
-.back-btn,
+.pn-back-btn,
 #drawer_btn {
-    left: 0;
+    left: 20px;
 }
-
-/* .header-btn-right {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-} */
 
 .header-ic-01 {
     width: 18px !important;
@@ -447,7 +438,7 @@ main {
 /*Account Management Icon(header)*/
 
 .header-btn-right {
-    right: 0px;
+    right: 20px;
 }
 
 /*-------------------------account page(To here)-------------------------*/

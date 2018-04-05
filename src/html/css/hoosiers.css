@@ -45,13 +45,7 @@ header {
 }
 
 #back_btn {
-  background: none;
-  border: none;
   color: #5d5d5d;
-  height: 100%;
-  left: 12px;
-  padding: 0;
-  position: absolute;
 }
 
 #back_btn .icon {
@@ -89,17 +83,11 @@ header.top {
 
 header.top #drawer_btn {
   color: #5d5d5d;
-  height: 100%;
-  padding: 0;
 }
 
 header.top #sort_btn {
-  position: absolute;
   right: 12px;
-  top: 0;
   color: #5d5d5d;
-  padding: 0;
-  height: 100%;
 }
 
 header.top>.header-title {
@@ -183,7 +171,6 @@ main {
 
 .title-area {
   flex: 0 0 auto;
-  /* font-size: 1.2rem; */
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -253,31 +240,15 @@ main {
 /* フッター */
 
 footer {
-  /* flex: 0 0 auto;
+  flex: 0 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  border-radius: 1px;
-  z-index: 5555; */
-  height: 4.0rem;
-    flex: 0 0 auto;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
-    /* text-align: center; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* font-size: 1.5rem; */
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
 }
 
 footer>button {
