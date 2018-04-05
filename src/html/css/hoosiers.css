@@ -253,7 +253,7 @@ main {
 /* フッター */
 
 footer {
-  flex: 0 0 auto;
+  /* flex: 0 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -263,7 +263,18 @@ footer {
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
   border-radius: 1px;
-  z-index: 5555;
+  z-index: 5555; */
+  height: 4.0rem;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 footer>button {
