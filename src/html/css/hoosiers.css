@@ -314,11 +314,7 @@ footer>button>.icon-text {
 
 .news-footer-btn {
   border: 1px solid #5D5D5D;
-  font-weight: bold;
-}
-
-.news-footer-btn {
-  border: 1px solid #5D5D5D;
+  color: #5D5D5D;
   font-weight: bold;
 }
 
