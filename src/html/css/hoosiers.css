@@ -45,13 +45,7 @@ header {
 }
 
 #back_btn {
-  background: none;
-  border: none;
   color: #5d5d5d;
-  height: 100%;
-  left: 12px;
-  padding: 0;
-  position: absolute;
 }
 
 #back_btn .icon {
@@ -88,22 +82,12 @@ header.top {
 }
 
 header.top #drawer_btn {
-  background: none;
-  border: none;
   color: #5d5d5d;
-  height: 100%;
-  padding: 0;
 }
 
 header.top #sort_btn {
-  position: absolute;
   right: 12px;
-  top: 0;
-  background: none;
-  border: none;
   color: #5d5d5d;
-  padding: 0;
-  height: 100%;
 }
 
 header.top>.header-title {
@@ -138,13 +122,11 @@ main {
   justify-content: flex-end;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/clean.JPG);
   color: #ffffff;
-  /* height: 220px; */
   height: 280px;
   background-size: cover;
   padding: 10px;
   position: relative;
   width: 100%;
-  z-index: 2;
 }
 
 .top-content.new::before {
@@ -167,7 +149,6 @@ main {
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
-  /* font-size: 0.75rem; */
   font-size: 0.9rem;
 }
 
@@ -179,21 +160,17 @@ main {
   flex: 0 0 auto;
 }
 
-.evaluation>span{
+.evaluation>span {
   margin-right: 5px;
 }
 
 .etc_area .icon {
-  /* height: 14px;
-  width: 14px; */
-
-    height: 18px;
+  height: 18px;
   width: 18px;
 }
 
 .title-area {
   flex: 0 0 auto;
-  /* font-size: 1.2rem; */
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -202,7 +179,6 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
-  z-index: 1;
 }
 
 .list ul li {
@@ -254,8 +230,6 @@ main {
 }
 
 .list ul li .list-thumbnail {
-  /* height: 88px; */
-  /* width: 88px; */
   height: 100px;
   width: 100px;
   object-fit: cover;
@@ -272,9 +246,9 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.6);
-  border-radius: 1px;
-  z-index: 3;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
 }
 
 footer>button {
@@ -300,3 +274,80 @@ footer>button>.icon-text {
 }
 
 /* /フッター */
+
+.news-top-content {
+  height: 250px;
+}
+
+.etc_area .icon-large {
+  height: 25px;
+  width: 25px;
+}
+
+.news-icon-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.news-icon-text>a {
+  color: #007bff;
+  text-decoration: underline !important;
+}
+
+.news-article {
+  margin: 15px;
+}
+
+.news-article>.etc_area>.date {
+  text-align: right;
+  margin: auto 0 0 0;
+}
+
+.news-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.news-text {
+  font-size: 1.2rem;
+}
+
+.news-footer-btn {
+  border: 1px solid #5D5D5D;
+  color: #5D5D5D;
+  font-weight: bold;
+}
+
+.news-footer-btn::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2em;
+  vertical-align: 0px;
+  font-weight: 900;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-right: 10px;
+}
+
+.news-star-btn::before {
+  content: "\f005";
+}
+
+.news-calendar-btn::before {
+  content: "\f274";
+}
+
+.news-footer-btn.clicked {
+  color: #ffffff;
+  background-color: #3B73B7;
+  border: 1px solid #3B73B7;
+}
+
+.sort-li{
+  height: 60px;
+  font-size: 1.3rem;
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+}

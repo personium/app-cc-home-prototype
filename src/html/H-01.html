@@ -23,7 +23,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="./js/personium.js"></script>
 
-  <title>Personium</title>
+  <title>Hoosiers</title>
 </head>
 
 <body>
@@ -96,16 +96,18 @@
   <div id="sort">
     <div id="sort-background">
       <div id="sort-menu">
-        <div class="sort-title">並び替え…</div>
+        <div class="sort-title">
+          <span>並び替え…</span>
+        </div>
         <ul class="hover-action">
-          <li class="sort-menu-list">
-            全て
+          <li class="pn-check-list check-position-r sort-li">
+            <span>全て</span>
           </li>
-          <li class="sort-menu-list">
-            イベント
+          <li class="pn-check-list check-position-r sort-li">
+            <span>イベント</span>
           </li>
-          <li class="sort-menu-list">
-            お知らせ
+          <li class="pn-check-list check-position-r sort-li">
+            <span>お知らせ</span>
           </li>
         </ul>
       </div>
@@ -113,37 +115,44 @@
   </div>
 
   <header class="top">
-    <button id="drawer_btn">
-      <i class="fas fa-bars fa-2x icon"></i>
-      <div class="icon-text">メニュー</div>
+    <button id="drawer_btn" class="header-btn pn-btn">
+      <div>
+        <i class="fas fa-bars fa-2x icon"></i>
+        <div class="icon-text">メニュー</div>
+      </div>
     </button>
     <div class="header-title">
       <div class="title">Hoosiers</div>
       <div class="subtitle">地域のイベント情報コミュニティー</div>
     </div>
-    <button id="sort_btn">
-      <i class="fas fa-sort-amount-down fa-2x icon"></i>
-      <div class="icon-text">並び替え</div>
+    <button id="sort_btn" class="header-btn pn-btn">
+      <div>
+        <i class="fas fa-sort-amount-down fa-2x icon"></i>
+        <div class="icon-text">並び替え</div>
+      </div>
     </button>
   </header>
 
   <main>
-    <div class="top-content new">
-      <div class="etc_area">
-        <div class="date">
-          【みんなの掲示板】 2018/3/31
+    <a href="H-05.html">
+      <div class="top-content new">
+        <div class="etc_area">
+          <div class="date">
+            【みんなの掲示板】 2018/3/31
+          </div>
+          <div class="evaluation">
+            <i class="fa fa-star fa-2x icon"></i>
+            <span>20</span>
+            <i class="fas fa-calendar-check fa-2x icon"></i>
+            <span>123</span>
+          </div>
         </div>
-        <div class="evaluation">
-          <i class="fa fa-star fa-2x icon"></i>
-          <span>20</span>
-          <i class="fas fa-calendar-check fa-2x icon"></i>
-          <span>123</span>
+        <div class="title-area">
+          共有フロアの清掃を実施します。みなさんお誘い合わせの上、奮ってご参加ください！
         </div>
       </div>
-      <div class="title-area">
-        共有フロアの清掃を実施します。みなさんお誘い合わせの上、奮ってご参加ください！
-      </div>
-    </div>
+    </a>
+
     <div class="list">
       <ul>
         <li>

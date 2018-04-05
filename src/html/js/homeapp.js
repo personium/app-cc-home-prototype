@@ -35,9 +35,9 @@ $(function () {
     }).resize();
 
     //もう一度ボタンが押された場合
-    $('#logout').on('click', function () {
-        $('#exampleModal').modal('show');
-    });
+    // $('#logout').on('click', function () {
+    //     $('.double-btn-modal').modal('show');
+    // });
 
     /*-------------------------main page(To here)-------------------------*/
 
