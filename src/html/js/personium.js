@@ -26,6 +26,7 @@ $(function () {
   Control_Slide_List();
   Sort_Menu();
   Control_Dialog()
+  Add_Check_Mark()
 
   /**
    * Drawer_Menu
@@ -80,10 +81,9 @@ $(function () {
       event.stopPropagation();
     });
 
-    $('.sort-menu-list').click(function (event) {
-      $('#sort-menu').find('.checked').removeClass('checked');
-      $(this).addClass('checked');
-    });
+    // $('.pn-check-list').click(function (event) {
+    //   Add_Check_Mark($('#sort-menu'), $(this));
+    // });
   }
 
   /**
@@ -172,4 +172,36 @@ $(function () {
     });
   }
 
+  /**
+   * Add_Check_Mark
+   * param:none
+   */
+  function Add_Check_Mark() {
+    $('.pn-check-list').click(function (event) {
+
+      //CASE: sort list
+      if ($(this).parents('#sort-menu').length != 0) {
+        $('#sort-menu').find('.check-mark-right').removeClass('check-mark-right');
+        $(this).addClass('check-mark-right');
+      }
+
+      //CASE: icon list
+      if ($(this).parents('#icon-check-list').length != 0) {
+        $(this).find('.pn-icon-check').toggle();
+      }
+
+      //CASE: check list
+      if ($(this).parents('#check-list').length != 0) {
+        
+        if ($(this).hasClass('check-mark-left')) {
+          $(this).removeClass('check-mark-left');
+        } else {
+          $(this).addClass('check-mark-left');
+        }
+        
+      }
+
+    });
+
+  }
 });

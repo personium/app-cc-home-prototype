@@ -343,3 +343,11 @@ footer>button>.icon-text {
   background-color: #3B73B7;
   border: 1px solid #3B73B7;
 }
+
+.sort-li{
+  height: 60px;
+  font-size: 1.3rem;
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+}

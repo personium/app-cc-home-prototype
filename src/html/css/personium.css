@@ -157,27 +157,56 @@ main {
     overflow: auto;
 }
 
-.sort-title,
-.sort-menu-list {
+.sort-title {
     height: 60px;
-    line-height: 60px;
     font-size: 1.3rem;
-    padding-left: 20px;
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+}
+
+.pn-check-list{
     position: relative;
 }
 
-.checked::after {
+.sort-title>span,
+.check-position-r>span{
+    margin: auto;
+    flex: 1;
+}
+
+.check-mark-right::after {
     font-family: "Font Awesome 5 Free";
     content: "\f00c";
     position: absolute;
     font-size: 1.5em;
     vertical-align: middle;
     font-weight: 900;
-    right: 0;
     top: 50%;
+    right: 0;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #2978FF;
+}
+.check-position-r{
+    padding-right: 60px;
+}
+
+.check-mark-left::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    position: absolute;
+    font-size: 1.5em;
+    vertical-align: middle;
+    font-weight: 900;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    color: #2978FF;
+}
+.check-position-l{
+    padding-left: 80px;
 }
 
 /*drawer menu's list*/
@@ -399,6 +428,20 @@ main {
     transform: translate(-50%, -50%);
 }
 
+.pn-list-no-arrow{
+    padding-right: 10px;
+}
+
+.pn-list-no-arrow::after{
+    content: "";
+}
+
+.pn-list > span{
+    margin: auto 0;
+    flex: 1;
+    font-size: 1.2rem;
+}
+
 .text-hidden {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -412,6 +455,8 @@ main {
     display: inline-block;
     flex: 1;
     position: relative;
+    overflow: auto;
+    word-wrap: break-word;
 }
 
 .account-info>div {
@@ -479,6 +524,7 @@ main {
     -moz-border-radius: 50%;
     color: #ffffff;
     text-align: center;
+    display: none;
 }
 
 /*Header Button*/
