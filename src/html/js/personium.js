@@ -25,21 +25,12 @@ $(function () {
   Drawer_Menu();
   Control_Slide_List();
   Sort_Menu();
-  Control_Dialog()
-  Add_Check_Mark()
+  Control_Dialog();
+  Add_Check_Mark();
 
-  if (target.webkitRequestFullscreen) {
-		target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
-	} else if (target.mozRequestFullScreen) {
-		target.mozRequestFullScreen(); //FF10+
-	} else if (target.msRequestFullscreen) {
-		target.msRequestFullscreen(); //IE11+
-	} else if (target.requestFullscreen) {
-		target.requestFullscreen(); // HTML5 Fullscreen API仕様
-	} else {
-		alert('ご利用のブラウザはフルスクリーン操作に対応していません');
-		return;
-	}
+  $(window).on('load', function () {
+    setTimeout(scrollTo( 0, 1), 0);
+});
 
   /**
    * Drawer_Menu
