@@ -74,15 +74,6 @@ header {
     height: 120px;
 }
 
-.bg-gray {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #F7F7F7;
-}
-
 main {
     flex-direction: column;
     flex: 1 1 auto;
@@ -131,6 +122,7 @@ main {
 .user-name {
     font-size: 1.5rem;
     font-weight: bold;
+    
 }
 
 /*Account*/
@@ -221,17 +213,6 @@ main {
 /*-------------------------top page(To here)-------------------------*/
 
 /*-------------------------links page(From here)-------------------------*/
-
-#links {
-    background-color: #ffffff;
-}
-
-#links>ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
 .pn-list>.account-info>.user-name {
     font-weight: normal;
 }

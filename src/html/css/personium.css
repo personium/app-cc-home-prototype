@@ -36,6 +36,21 @@ html {
     font-size: 16px;
 }
 
+.bg-gray {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F7F7F7;
+}
+
+.bg-white>ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
 ul {
     list-style-type: none;
     padding: 0px;
@@ -203,8 +218,13 @@ main {
     left: 15px;
     -webkit-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
+    color: #D0D0D0;
+}
+
+.check-mark-left.checked::before {
     color: #2978FF;
 }
+
 .check-position-l{
     padding-left: 80px;
 }
@@ -281,9 +301,9 @@ main {
 }
 
 /*single button dialog*/
-
 .single-btn-modal>.modal-dialog>.modal-content>.pn-modal-footer>button {
     width: 100%;
+    border-radius: 0 0 .3rem .3rem;
 }
 
 /*slide list*/
@@ -486,6 +506,7 @@ main {
 .pn-search-box {
     padding: 10px 0px;
     border-bottom: 1px solid #999999;
+    background-color: #ffffff;
 }
 
 .pn-search-box>.input-group>input {

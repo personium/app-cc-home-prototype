@@ -28,6 +28,19 @@ $(function () {
   Control_Dialog()
   Add_Check_Mark()
 
+  if (target.webkitRequestFullscreen) {
+		target.webkitRequestFullscreen(); //Chrome15+, Safari5.1+, Opera15+
+	} else if (target.mozRequestFullScreen) {
+		target.mozRequestFullScreen(); //FF10+
+	} else if (target.msRequestFullscreen) {
+		target.msRequestFullscreen(); //IE11+
+	} else if (target.requestFullscreen) {
+		target.requestFullscreen(); // HTML5 Fullscreen API仕様
+	} else {
+		alert('ご利用のブラウザはフルスクリーン操作に対応していません');
+		return;
+	}
+
   /**
    * Drawer_Menu
    * param:none
@@ -188,15 +201,22 @@ $(function () {
       //CASE: icon list
       if ($(this).parents('#icon-check-list').length != 0) {
         $(this).find('.pn-icon-check').toggle();
+        if(!($(this).find('.pn-icon-check').css('display')=='none')){
+          $(this).css('background-color','#EEEEEE');
+        } else {
+          $(this).css('background-color','#FFFFFF');
+        }
       }
 
       //CASE: check list
       if ($(this).parents('#check-list').length != 0) {
         
-        if ($(this).hasClass('check-mark-left')) {
-          $(this).removeClass('check-mark-left');
+        if ($(this).hasClass('checked')) {
+          $(this).removeClass('checked');
+          $(this).css('background-color','#FFFFFF');
         } else {
-          $(this).addClass('check-mark-left');
+          $(this).addClass('checked');
+          $(this).css('background-color','#EEEEEE');
         }
         
       }
