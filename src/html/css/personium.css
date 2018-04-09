@@ -574,3 +574,24 @@ main {
     width: 50%;
     margin: 5px;
 }
+
+
+header{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main{
+    margin-top: 4.0rem;
+}
+
+footer {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
