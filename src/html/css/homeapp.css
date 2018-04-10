@@ -21,9 +21,7 @@
 
 @charset "UTF-8";
 body {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* overflow: hidden; */
+    background-color: #F7F7F7;
 }
 
 header {
@@ -78,6 +76,10 @@ main {
     flex-direction: column;
     flex: 1 1 auto;
     position: relative;
+}
+
+.home-footer{
+    padding-bottom:5.0rem;
 }
 
 /*-------------------------top(From here)-------------------------*/

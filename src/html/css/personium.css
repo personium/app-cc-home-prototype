@@ -36,25 +36,11 @@ html {
     font-size: 16px;
 }
 
-.bg-gray {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #F7F7F7;
-}
-
-.bg-white>ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
 ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+    background-color: #ffffff;
 }
 
 li {
@@ -76,19 +62,23 @@ a:hover {
 header {
     height: 4.0rem;
     flex: 0 0 auto;
-    overflow: hidden;
-    position: relative;
     z-index: 2;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 main {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    padding-top: 4.0rem;
 }
 
 /*personium common button*/
@@ -460,6 +450,7 @@ main {
     margin: auto 0;
     flex: 1;
     font-size: 1.2rem;
+    word-break: break-word;
 }
 
 .text-hidden {
@@ -570,28 +561,15 @@ main {
 
 /*Footer Button*/
 
-.footer-btn {
-    width: 50%;
-    margin: 5px;
-}
-
-
-header{
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-main{
-    margin-top: 4.0rem;
-}
-
 footer {
     width: 100%;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.footer-btn {
+    width: 50%;
+    margin: 5px;
 }
