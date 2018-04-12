@@ -35,17 +35,20 @@
 <body>
 
     <header>
-        <a class="header-btn pn-back-btn pn-btn" href="incoming_message_list.html">
+        <a class="header-btn pn-back-btn pn-btn" href="message.html">
             <i id="back_btn" class="fas fa-angle-left fa-2x header-ic-01"></i>
         </a>
         <span>メッセージ作成</span>
+        <button class="slide-list-edit-btn header-btn header-btn-right pn-btn send-icon disable">
+            <i class="fas fa-paper-plane fa-2x header-ic-03"></i>
+        </button>
     </header>
 
     <main class="incoming_msg">
         <div class="pn-list to-address">
             <div class="to-user-info-area">宛先</div>
 
-            <!-- <div class="to-user-info-area">
+            <div class="to-user-info-area to-address-info">
                 <div class="to-user-info">
                     <img class="user-icon-xs" src="img/user-icon-02.png" alt="アイコン">
                     <div class="to-user-name">さとう めぐみ</div>
@@ -67,16 +70,14 @@
                         <i class="fas fa-times-circle fa-2x user-icon-xs"></i>
                     </button>
                 </div>
-            </div> -->
-            <button class="pn-btn add-circle-btn">
+            </div>
+            <button id="add-to-account" class="pn-btn add-circle-btn">
                 <i class="fas fa-plus-circle fa-2x user-icon-xs"></i>
             </button>
         </div>
-        <textarea class="form-control pn-textarea create-title" placeholder="件名"></textarea>
-        <!-- <div class="message-title">
-            
-        </div> -->
-        <textarea class="form-control pn-textarea" rows="3" placeholder="本文"></textarea>
+        <textarea class="form-control pn-textarea create-title create-msg-ta" placeholder="件名"></textarea>
+        <textarea class="form-control pn-textarea create-msg create-msg-ta" rows="3" placeholder="本文"></textarea>
+
 
     </main>
 

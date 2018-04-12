@@ -81,6 +81,10 @@ main {
     padding-top: 4.0rem;
 }
 
+.bg-white{
+    background: #ffffff;
+}
+
 /*personium common button*/
 
 .pn-btn {

@@ -223,22 +223,21 @@ $(function () {
    * param:none
    */
   function Resize_Textarea() {
-    $(".pn-textarea").height(32); //init
-    $(".pn-textarea").css("lineHeight", "20px"); //init
-
     $(".pn-textarea").on("input", function (evt) {
-      if (evt.target.scrollHeight > evt.target.offsetHeight) {
-        $(evt.target).height(evt.target.scrollHeight);
-      } else {
-        var lineHeight = Number($(evt.target).css("lineHeight").split("px")[0]);
-        while (true) {
-          $(evt.target).height($(evt.target).height() - lineHeight);
-          if (evt.target.scrollHeight > evt.target.offsetHeight) {
-            $(evt.target).height(evt.target.scrollHeight);
-            break;
-          }
-        }
+      $(evt.target).height("10px");
+      $(evt.target).css("lineHeight", "30px"); //init
+
+      var p_top = Number($(this).css('padding-top').replace('px', ''));
+      var p_bottom = Number($(this).css('padding-bottom').replace('px', ''));
+
+      var wScrollHeight = parseInt(evt.target.scrollHeight - (p_top + p_bottom));
+      var wLineH = evt.target.lineHeight;
+
+      if (wScrollHeight < (wLineH * 2)) {
+        wScrollHeight = (wLineH * 1);
       }
+
+      $(evt.target).height(wScrollHeight + "px");
     });
   }
 });
