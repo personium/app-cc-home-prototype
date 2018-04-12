@@ -58,10 +58,6 @@ a:hover {
     text-decoration: none !important;
     color: #707070;
 }
-#container{
-    display: flex;
-    height: 100%;
-}
 
 header {
     height: 4.0rem;

@@ -662,3 +662,9 @@ main {
     font-size: 1.0rem; */
     /* padding: 0.6rem; */
 }
+
+.pn-textarea:focus, .pn-textarea:hover, .pn-textarea:active{
+    outline: 0;
+    border-color: none;
+    box-shadow: none;
+}
