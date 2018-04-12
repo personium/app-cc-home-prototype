@@ -300,6 +300,15 @@ main {
     font-size: 1.2rem;
 }
 
+.role-icon{
+    margin: 0 10px;
+    color: #818181;
+}
+
+.role-name{
+    position: fixed;
+}
+
 /*-------------------------community more detail page(To here)-------------------------*/
 
 /*-------------------------profile page(From here)-------------------------*/
@@ -638,7 +647,7 @@ main {
 
 .to-user-info-area {
     padding-right: 32px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: .375rem .75rem;
 }
 
@@ -676,12 +685,12 @@ main {
 
 .to-user-name {
     margin: auto 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .create-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     height: 44px;
     border-bottom: 1px solid #999999;
 }
@@ -695,6 +704,6 @@ main {
 }
 
 .create-msg {
-    height: calc(100% - 95px);
-    font-size: 1.4rem;
+    min-height: calc(100% - 95px);
+    font-size: 1.2rem;
 }
