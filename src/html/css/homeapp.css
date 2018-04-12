@@ -56,6 +56,10 @@ header {
 }
 
 /*User Icon Size*/
+.user-icon-xs {
+    width: 24px;
+    height: 24px;
+}
 
 .user-icon-small {
     width: 80px;
@@ -512,6 +516,7 @@ main {
 
 .incoming_msg {
     flex-direction: column;
+    background-color: #ffffff;
 }
 
 .sender::after {
@@ -601,4 +606,59 @@ main {
 .received-info,
 .message-list-text {
     font-size: 0.85rem;
+}
+/*-------------------------incoming message list page(To here)-------------------------*/
+
+/*-------------------------create message page(From here)-------------------------*/
+.to-address{
+    padding-right: 0;
+    min-height: 50px;
+    border-bottom: 1px solid #999999;
+}
+
+.to-address::after{
+    content: '';
+}
+.to-user-info-area{
+    padding-right: 32px;
+    font-size: 1.4rem;
+    padding: .375rem .75rem;
+}
+
+.to-user-info{
+    display: inline-flex;
+    padding: 5px;
+    
+    /* background-color: #F7F7F7; */
+}
+.to-user-info > img{
+    border-radius: 50%;
+    flex: 0 0 auto;
+    margin: auto;
+}
+
+.dlt-circle-btn{
+    color: #b4b4b4;
+    padding: 0;
+}
+
+.add-circle-btn{
+    color: #2979FF;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.to-user-name{
+    margin:auto 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.create-title{
+    /* height: 45px;
+    font-size: 1.0rem; */
+    /* padding: 0.6rem; */
 }

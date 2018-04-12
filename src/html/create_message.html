@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/personium.css">
+    <link rel="stylesheet" href="./css/homeapp.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        FontAwesomeConfig = {
+            searchPseudoElements: true
+        };
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="./js/personium.js"></script>
+    <script src="./js/homeapp.js"></script>
+
+    <title>Personium</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a class="header-btn pn-back-btn pn-btn" href="incoming_message_list.html">
+                <i id="back_btn" class="fas fa-angle-left fa-2x header-ic-01"></i>
+            </a>
+            <span>メッセージ作成</span>
+        </header>
+
+        <main class="incoming_msg">
+            <div class="pn-list to-address">
+                <div class="to-user-info-area">宛先</div>
+
+                <!-- <div class="to-user-info-area">
+                    <div class="to-user-info">
+                        <img class="user-icon-xs" src="img/user-icon-02.png" alt="アイコン">
+                        <div class="to-user-name">さとう めぐみ</div>
+                        <button class="pn-btn dlt-circle-btn">
+                            <i class="fas fa-times-circle fa-2x user-icon-xs"></i>
+                        </button>
+                    </div>
+                    <div class="to-user-info">
+                        <img class="user-icon-xs" src="img/user-icon-02.png" alt="アイコン">
+                        <div class="to-user-name">たかはし　あいこ</div>
+                        <button class="pn-btn dlt-circle-btn">
+                            <i class="fas fa-times-circle fa-2x user-icon-xs"></i>
+                        </button>
+                    </div>
+                    <div class="to-user-info">
+                        <img class="user-icon-xs" src="img/user-icon-02.png" alt="アイコン">
+                        <div class="to-user-name">たけなか　しおり</div>
+                        <button class="pn-btn dlt-circle-btn">
+                            <i class="fas fa-times-circle fa-2x user-icon-xs"></i>
+                        </button>
+                    </div>
+                </div> -->
+                <button class="pn-btn add-circle-btn">
+                    <i class="fas fa-plus-circle fa-2x user-icon-xs"></i>
+                </button>
+            </div>
+            <textarea class="form-control pn-textarea create-title" placeholder="件名"></textarea>
+            <!-- <div class="message-title">
+                
+            </div> -->
+            <div>
+                <textarea class="form-control pn-textarea" rows="3" placeholder="本文"></textarea>
+            </div>
+
+
+        </main>
+    </div>
+
+
+</body>
+
+</html>

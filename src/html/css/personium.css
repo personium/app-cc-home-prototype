@@ -58,6 +58,10 @@ a:hover {
     text-decoration: none !important;
     color: #707070;
 }
+#container{
+    display: flex;
+    height: 100%;
+}
 
 header {
     height: 4.0rem;
@@ -572,4 +576,30 @@ footer {
 .footer-btn {
     width: 50%;
     margin: 5px;
+}
+
+/*three modal button*/
+.pn-three-btn-modal-footer {
+    padding: 0;
+    border-top: 0;
+    display: block;
+    padding-bottom: 1.4rem;
+}
+
+.pn-three-btn-modal-footer > button {
+    width: 80%;
+    margin: 7px 10%!important;
+    height: 45px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.three-btn-modal-blue{
+    background-color: #5aa4f4;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.pn-textarea{
+    border:0;
 }

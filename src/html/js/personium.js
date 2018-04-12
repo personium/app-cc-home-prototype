@@ -21,31 +21,13 @@
 
 
 $(function () {
-//   function init() {
-//     // スクロールして何ピクセルでアニメーションさせるか
-//     var px_change   = 300;
- 
-//     // スクロールのイベントハンドラを登録
-//     window.addEventListener('scroll', function(e){
-//         // 変化するポイントまでスクロールしたらクラスを追加
-//         if ( $(window).scrollTop() > px_change ) {
-//             $("header").addClass("smaller");
- 
-//         // 変化するポイント以前であればクラスを削除
-//         } else if ( $("header").hasClass("smaller") ) {
-//             $("header").removeClass("smaller");
-//         }
-//     });
-// }
-// window.onload = init();
-
-
 
   Drawer_Menu();
   Control_Slide_List();
   Sort_Menu();
   Control_Dialog();
   Add_Check_Mark();
+  Resize_Textarea();
 
   /**
    * Drawer_Menu
@@ -189,6 +171,11 @@ $(function () {
     $('.pn-single-modal').on('click', function () {
       $('.single-btn-modal').modal('show');
     });
+
+    //three button modal
+    $('.pn-three-modal').on('click', function () {
+      $('.three-btn-modal').modal('show');
+    });
   }
 
   /**
@@ -207,27 +194,51 @@ $(function () {
       //CASE: icon list
       if ($(this).parents('#icon-check-list').length != 0) {
         $(this).find('.pn-icon-check').toggle();
-        if(!($(this).find('.pn-icon-check').css('display')=='none')){
-          $(this).css('background-color','#EEEEEE');
+        if (!($(this).find('.pn-icon-check').css('display') == 'none')) {
+          $(this).css('background-color', '#EEEEEE');
         } else {
-          $(this).css('background-color','#FFFFFF');
+          $(this).css('background-color', '#FFFFFF');
         }
       }
 
       //CASE: check list
       if ($(this).parents('#check-list').length != 0) {
-        
+
         if ($(this).hasClass('checked')) {
           $(this).removeClass('checked');
-          $(this).css('background-color','#FFFFFF');
+          $(this).css('background-color', '#FFFFFF');
         } else {
           $(this).addClass('checked');
-          $(this).css('background-color','#EEEEEE');
+          $(this).css('background-color', '#EEEEEE');
         }
-        
+
       }
 
     });
 
+  }
+
+  /**
+   * Add_Check_Mark
+   * param:none
+   */
+  function Resize_Textarea() {
+    $(".pn-textarea").height(32); //init
+    $(".pn-textarea").css("lineHeight", "20px"); //init
+
+    $(".pn-textarea").on("input", function (evt) {
+      if (evt.target.scrollHeight > evt.target.offsetHeight) {
+        $(evt.target).height(evt.target.scrollHeight);
+      } else {
+        var lineHeight = Number($(evt.target).css("lineHeight").split("px")[0]);
+        while (true) {
+          $(evt.target).height($(evt.target).height() - lineHeight);
+          if (evt.target.scrollHeight > evt.target.offsetHeight) {
+            $(evt.target).height(evt.target.scrollHeight);
+            break;
+          }
+        }
+      }
+    });
   }
 });
