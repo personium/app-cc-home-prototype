@@ -47,6 +47,21 @@
         </div>
     </div>
 
+    <div class="modal fade three-btn-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog pn-modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body pn-modal-body">
+                    QRコード読み込み
+                </div>
+                <div class="modal-footer pn-three-btn-modal-footer">
+                    <button type="button" class="btn three-btn-modal-blue" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn three-btn-modal-blue" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn ok-btn" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <a class="header-btn pn-back-btn pn-btn" href="#">
             <i id="back_btn" class="fas fa-angle-left fa-2x header-ic-01"></i>
@@ -55,116 +70,114 @@
     </header>
 
     <main>
-        <!--user account infomation-->
-        <div class="bg-gray">
-            <div>
-                <div style="background: #ffc107;border-bottom: 1px solid #999999;">★検索ボックス付きリスト★</div>
-                <!--search box-->
-                <div class="pn-search-box">
-                    <div class="input-group">
-                        <div class="pn-search-title">
-                            <span>検索</span>
-                        </div>
-                        <input type="text" class="form-control">
-                        <button class="pn-btn pn-search-btn">
-                            <i class="fas fa-search fa-2x"></i>
-                        </button>
-                    </div>
+        <div style="background: #ffc107;border-bottom: 1px solid #999999;">★検索ボックス付きリスト★</div>
+        <!--search box-->
+        <div class="pn-search-box">
+            <div class="input-group">
+                <div class="pn-search-title">
+                    <span>検索</span>
                 </div>
-
-                <div style="background: #ffc107;border-bottom: 1px solid #999999;">★ボタン一つのみのダイアログ★</div>
-                <ul class="hover-action">
-                    <!--single button dialog-->
-                    <li class="pn-single-modal">
-                        <div class="pn-list" style="padding-left: 20px;">
-                            <span>クリックするとボタン1つのみのダイアログが表示されるサンプルです。</span>
-                        </div>
-                    </li>
-                </ul>
-
-                <div id="icon-check-list">
-                    <div style="background: #ffc107;border-bottom: 1px solid #999999;">★リストにチェックを付けるパターン(アイコンバージョン)★</div>
-                    <ul>
-                        <li class="pn-check-list">
-                            <div class="pn-list pn-list-no-arrow">
-                                <div class="pn-list-icon">
-                                    <div class="pn-icon-check">
-                                        <i class="fas fa-check"></i>
-                                    </div>
-                                    <img src="img/user-icon-02.png" alt="アイコン">
-                                </div>
-                                <div class="account-info">
-                                    <div class="user-name">右端に矢印を出さないパターンのリストです</div>
-                                    <div>
-                                        <span>登録日 </span>
-                                        <span>2018/01/23</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="pn-check-list">
-                                <div class="pn-list pn-list-no-arrow">
-                                    <div class="pn-list-icon">
-                                        <div class="pn-icon-check">
-                                            <i class="fas fa-check"></i>
-                                        </div>
-                                        <img src="img/user-icon-02.png" alt="アイコン">
-                                    </div>
-                                    <div class="account-info">
-                                        <div class="user-name">XXXXXXXXXXXXXXXXXXXXXX</div>
-                                        <div>
-                                            <span>登録日 </span>
-                                            <span>2018/01/23</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="pn-check-list">
-                                    <div class="pn-list pn-list-no-arrow">
-                                        <div class="pn-list-icon">
-                                            <div class="pn-icon-check">
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                            <img src="img/user-icon-02.png" alt="アイコン">
-                                        </div>
-                                        <div class="account-info">
-                                            <div class="user-name">XXXXXXXXXXXXXXXXXXXXXX</div>
-                                            <div>
-                                                <span>登録日 </span>
-                                                <span>2018/01/23</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                    </ul>
-                </div>
-
-                <div id="check-list">
-                    <div style="background: #ffc107;border-bottom: 1px solid #999999;">★リストにチェックを付けるパターン★</div>
-                    <ul>
-                        <li class="pn-check-list check-position-l">
-                            <div class="pn-list pn-list-no-arrow">
-                                <span>左にチェックを付けてくれるリストです</span>
-                            </div>
-                        </li>
-                        <li class="pn-check-list check-position-l">
-                            <div class="pn-list pn-list-no-arrow">
-                                <span>XXXXXXXXXXXXXXXXXXXXXXXX</span>
-                            </div>
-                        </li>
-                        <li class="pn-check-list check-position-l">
-                            <div class="pn-list pn-list-no-arrow">
-                                <span>XXXXXXXXXXXXXXXXXXXXXXXX</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
+                <input type="text" class="form-control">
+                <button class="pn-btn pn-search-btn">
+                    <i class="fas fa-search fa-2x"></i>
+                </button>
             </div>
         </div>
+
+        <div style="background: #ffc107;border-bottom: 1px solid #999999;">★ダイアログ★</div>
+        <ul class="hover-action">
+            <!--single button dialog-->
+            <li class="pn-single-modal">
+                <div class="pn-list" style="padding-left: 20px;">
+                    <span>クリックするとボタン1つのみのダイアログが表示されるサンプルです。</span>
+                </div>
+            </li>
+            <!--three button dialog-->
+            <li class="pn-three-modal">
+                <div class="pn-list" style="padding-left: 20px;">
+                    <span>クリックするとボタン3つのダイアログが表示されるサンプルです。</span>
+                </div>
+            </li>
+        </ul>
+
+        <div id="icon-check-list">
+            <div style="background: #ffc107;border-bottom: 1px solid #999999;">★リストにチェックを付けるパターン(アイコンバージョン)★</div>
+            <ul>
+                <li class="pn-check-list">
+                    <div class="pn-list pn-list-no-arrow">
+                        <div class="pn-list-icon">
+                            <div class="pn-icon-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <img src="img/user-icon-02.png" alt="アイコン">
+                        </div>
+                        <div class="account-info">
+                            <div class="user-name">右端に矢印を出さないパターンのリストです</div>
+                            <div>
+                                <span>登録日 </span>
+                                <span>2018/01/23</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="pn-check-list">
+                    <div class="pn-list pn-list-no-arrow">
+                        <div class="pn-list-icon">
+                            <div class="pn-icon-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <img src="img/user-icon-02.png" alt="アイコン">
+                        </div>
+                        <div class="account-info">
+                            <div class="user-name">XXXXXXXXXXXXXXXXXXXXXX</div>
+                            <div>
+                                <span>登録日 </span>
+                                <span>2018/01/23</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="pn-check-list">
+                    <div class="pn-list pn-list-no-arrow">
+                        <div class="pn-list-icon">
+                            <div class="pn-icon-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <img src="img/user-icon-02.png" alt="アイコン">
+                        </div>
+                        <div class="account-info">
+                            <div class="user-name">XXXXXXXXXXXXXXXXXXXXXX</div>
+                            <div>
+                                <span>登録日 </span>
+                                <span>2018/01/23</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="check-list">
+            <div style="background: #ffc107;border-bottom: 1px solid #999999;">★リストにチェックを付けるパターン★</div>
+            <ul>
+                <li class="pn-check-list check-position-l check-mark-left">
+                    <div class="pn-list pn-list-no-arrow">
+                        <span>左にチェックを付けてくれるリストです</span>
+                    </div>
+                </li>
+                <li class="pn-check-list check-position-l check-mark-left">
+                    <div class="pn-list pn-list-no-arrow">
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </div>
+                </li>
+                <li class="pn-check-list check-position-l check-mark-left">
+                    <div class="pn-list pn-list-no-arrow">
+                        <span>XXXXXXXXXXXXXXXXXXXXXXXX</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
-    <footer>
-    </footer>
 </body>
 
 </html>

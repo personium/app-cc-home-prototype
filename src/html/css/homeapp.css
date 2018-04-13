@@ -20,10 +20,12 @@
  */
 
 @charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    background-color: #F7F7F7;
 }
 
 header {
@@ -59,6 +61,11 @@ header {
 
 /*User Icon Size*/
 
+.user-icon-xs {
+    width: 24px;
+    height: 24px;
+}
+
 .user-icon-small {
     width: 80px;
     height: 80px;
@@ -74,19 +81,14 @@ header {
     height: 120px;
 }
 
-.bg-gray {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #F7F7F7;
-}
-
 main {
     flex-direction: column;
     flex: 1 1 auto;
     position: relative;
+}
+
+.home-footer {
+    padding-bottom: 5.0rem;
 }
 
 /*-------------------------top(From here)-------------------------*/
@@ -222,16 +224,6 @@ main {
 
 /*-------------------------links page(From here)-------------------------*/
 
-#links {
-    background-color: #ffffff;
-}
-
-#links>ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
 .pn-list>.account-info>.user-name {
     font-weight: normal;
 }
@@ -306,6 +298,15 @@ main {
     margin: auto 0;
     flex: 1;
     font-size: 1.2rem;
+}
+
+.role-icon{
+    margin: 0 10px;
+    color: #818181;
+}
+
+.role-name{
+    position: fixed;
 }
 
 /*-------------------------community more detail page(To here)-------------------------*/
@@ -529,6 +530,8 @@ main {
 
 .incoming_msg {
     flex-direction: column;
+    background-color: #ffffff;
+    height: 100%;
 }
 
 .sender::after {
@@ -577,7 +580,7 @@ main {
     font-size: 1.5rem;
 }
 
-.msg-menu-text-area{
+.msg-menu-text-area {
     width: 100%;
     position: relative;
 }
@@ -618,4 +621,89 @@ main {
 .received-info,
 .message-list-text {
     font-size: 0.85rem;
+}
+
+/*-------------------------incoming message list page(To here)-------------------------*/
+
+/*-------------------------create message page(From here)-------------------------*/
+
+.send-icon.disable {
+    opacity: 0.5;
+}
+
+.send-icon.active {
+    opacity: 1.0;
+}
+
+.to-address {
+    padding-right: 0;
+    min-height: 50px;
+    border-bottom: 1px solid #999999;
+}
+
+.to-address::after {
+    content: '';
+}
+
+.to-user-info-area {
+    padding-right: 32px;
+    font-size: 1.2rem;
+    padding: .375rem .75rem;
+}
+
+.to-address-info {
+    display: none;
+}
+
+.to-user-info {
+    display: inline-flex;
+    padding: 5px;
+    position: relative;
+}
+
+.to-user-info>img {
+    border-radius: 50%;
+    flex: 0 0 auto;
+    margin: auto;
+}
+
+.dlt-circle-btn {
+    color: #b4b4b4;
+    padding: 0;
+    display: flex;
+}
+
+.add-circle-btn {
+    color: #2979FF;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0.9rem;
+    margin-right: .75rem;
+}
+
+.to-user-name {
+    margin: auto 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.create-title {
+    font-size: 1.2rem;
+    height: 44px;
+    border-bottom: 1px solid #999999;
+}
+
+.create-msg-ta:focus,
+.create-msg-ta:hover,
+.create-msg-ta:active {
+    outline: 0;
+    border-color: none;
+    box-shadow: none;
+}
+
+.create-msg {
+    min-height: calc(100% - 95px);
+    font-size: 1.2rem;
 }

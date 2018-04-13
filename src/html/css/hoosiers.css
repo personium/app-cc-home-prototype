@@ -24,9 +24,9 @@
 }
 
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 /* ヘッダー */
@@ -114,6 +114,10 @@ main {
   flex: 1 1 auto;
   overflow: auto;
   z-index: 1;
+}
+
+.h-footer{
+  padding-bottom: 4.2rem;
 }
 
 .top-content {
@@ -241,12 +245,11 @@ main {
 
 footer {
   flex: 0 0 auto;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  position: relative;
+  background-color: #fafafa;
   z-index: 2;
   box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.2);
 }

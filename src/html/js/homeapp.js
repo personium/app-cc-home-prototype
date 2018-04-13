@@ -34,11 +34,6 @@ $(function () {
         }, 50);
     }).resize();
 
-    //もう一度ボタンが押された場合
-    // $('#logout').on('click', function () {
-    //     $('.double-btn-modal').modal('show');
-    // });
-
     /*-------------------------main page(To here)-------------------------*/
 
     /*-------------------------profile page(From here)-------------------------*/
@@ -79,7 +74,17 @@ $(function () {
     }
     /*-------------------------profile page(To here)-------------------------*/
 
-    /*-------------------------account page(From here)-------------------------*/
-
-    /*-------------------------account page(To here)-------------------------*/
+    /*-------------------------create page(From here)-------------------------*/
+    /*Add button clicked action(CAUTION!!! this motion is sample code!!!!)*/
+    $('#add-to-account').on('click', function () {
+        $('.to-user-info-area').toggle();
+        if(!($('.to-address-info').css('display')=='none')){
+            $('.send-icon').removeClass('disable');
+            $('.send-icon').addClass('active');
+        } else{
+            $('.send-icon').removeClass('active');
+            $('.send-icon').addClass('disable');
+        }
+    })
+    /*-------------------------create page(To here)-------------------------*/
 })

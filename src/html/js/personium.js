@@ -25,8 +25,9 @@ $(function () {
   Drawer_Menu();
   Control_Slide_List();
   Sort_Menu();
-  Control_Dialog()
-  Add_Check_Mark()
+  Control_Dialog();
+  Add_Check_Mark();
+  Resize_Textarea();
 
   /**
    * Drawer_Menu
@@ -170,6 +171,11 @@ $(function () {
     $('.pn-single-modal').on('click', function () {
       $('.single-btn-modal').modal('show');
     });
+
+    //three button modal
+    $('.pn-three-modal').on('click', function () {
+      $('.three-btn-modal').modal('show');
+    });
   }
 
   /**
@@ -188,20 +194,50 @@ $(function () {
       //CASE: icon list
       if ($(this).parents('#icon-check-list').length != 0) {
         $(this).find('.pn-icon-check').toggle();
+        if (!($(this).find('.pn-icon-check').css('display') == 'none')) {
+          $(this).css('background-color', '#EEEEEE');
+        } else {
+          $(this).css('background-color', '#FFFFFF');
+        }
       }
 
       //CASE: check list
       if ($(this).parents('#check-list').length != 0) {
-        
-        if ($(this).hasClass('check-mark-left')) {
-          $(this).removeClass('check-mark-left');
+
+        if ($(this).hasClass('checked')) {
+          $(this).removeClass('checked');
+          $(this).css('background-color', '#FFFFFF');
         } else {
-          $(this).addClass('check-mark-left');
+          $(this).addClass('checked');
+          $(this).css('background-color', '#EEEEEE');
         }
-        
+
       }
 
     });
 
+  }
+
+  /**
+   * Add_Check_Mark
+   * param:none
+   */
+  function Resize_Textarea() {
+    $(".pn-textarea").on("input", function (evt) {
+      $(evt.target).height("10px");
+      $(evt.target).css("lineHeight", "30px"); //init
+
+      var p_top = Number($(this).css('padding-top').replace('px', ''));
+      var p_bottom = Number($(this).css('padding-bottom').replace('px', ''));
+
+      var wScrollHeight = parseInt(evt.target.scrollHeight - (p_top + p_bottom));
+      var wLineH = evt.target.lineHeight;
+
+      if (wScrollHeight < (wLineH * 2)) {
+        wScrollHeight = (wLineH * 1);
+      }
+
+      $(evt.target).height(wScrollHeight + "px");
+    });
   }
 });
