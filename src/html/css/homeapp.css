@@ -306,7 +306,6 @@ main {
 }
 
 .role-name{
-    position: fixed;
 }
 
 /*-------------------------community more detail page(To here)-------------------------*/
@@ -472,6 +471,8 @@ main {
     height: 2.5rem;
     line-height: 2.5rem;
     padding-left: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .thin-border>ul>li {
