@@ -199,7 +199,6 @@ main {
     overflow: auto;
     background-color: #F6F7FB;
     align-content: flex-start;
-    visibility: hidden;
 }
 
 /*Application icon*/
@@ -225,7 +224,7 @@ main {
 
 /*-------------------------links page(From here)-------------------------*/
 
-.pn-list>.account-info>.user-name {
+.pn-list .account-info .user-name {
     font-weight: normal;
 }
 
@@ -301,12 +300,13 @@ main {
     font-size: 1.2rem;
 }
 
-.role-icon {
+.role-icon{
     margin: 0 10px;
     color: #818181;
 }
 
-.role-name {}
+.role-name{
+}
 
 /*-------------------------community more detail page(To here)-------------------------*/
 
@@ -650,7 +650,6 @@ main {
     padding-right: 32px;
     font-size: 1.2rem;
     padding: .375rem .75rem;
-    padding-right: 3.0rem;
 }
 
 .to-address-info {
@@ -686,8 +685,7 @@ main {
 }
 
 .to-user-name {
-    margin: auto 0px;
-    margin-left: 5px;
+    margin: auto 10px;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -709,4 +707,63 @@ main {
 .create-msg {
     min-height: calc(100% - 95px);
     font-size: 1.2rem;
+}
+
+/***************************************************************/
+
+.target-info{
+    position: relative;
+    display: flex;
+    min-height: 80px;
+    background-color: #ffffff;
+}
+
+.target-info .user-name{
+    font-weight: normal;
+}
+
+.info-role-list-title{
+    color: #0B7967;
+    font-weight: bold;
+    background: #ffffff;
+    padding-left: 10px;
+}
+
+/***************************************************************/
+.subtitle{
+    font-size: 1rem;
+}
+
+.category-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.category-title::after{
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-size: 2rem;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "\f107";
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.history-list{
+    padding-bottom: 10px;
+    border: none;
+}
+
+.history-info, .history-list-text{
+    font-size: 1.2rem;
+}
+
+.history-user-icon{
+    margin-top: 10px!important;
+    margin-bottom: auto!important;
 }
