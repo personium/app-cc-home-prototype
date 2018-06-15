@@ -383,7 +383,7 @@ main {
 }
 
 .pn-list-no-arrow::after {
-    content: "";
+    content: ""!important;
 }
 
 .pn-list>span {
