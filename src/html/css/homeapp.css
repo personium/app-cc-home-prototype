@@ -224,7 +224,7 @@ main {
 
 /*-------------------------links page(From here)-------------------------*/
 
-.pn-list>.account-info>.user-name {
+.pn-list .account-info .user-name {
     font-weight: normal;
 }
 
@@ -707,4 +707,63 @@ main {
 .create-msg {
     min-height: calc(100% - 95px);
     font-size: 1.2rem;
+}
+
+/***************************************************************/
+
+.target-info{
+    position: relative;
+    display: flex;
+    min-height: 80px;
+    background-color: #ffffff;
+}
+
+.target-info .user-name{
+    font-weight: normal;
+}
+
+.info-role-list-title{
+    color: #0B7967;
+    font-weight: bold;
+    background: #ffffff;
+    padding-left: 10px;
+}
+
+/***************************************************************/
+.subtitle{
+    font-size: 1rem;
+}
+
+.category-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.category-title::after{
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-size: 2rem;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "\f107";
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.history-list{
+    padding-bottom: 10px;
+    border: none;
+}
+
+.history-info, .history-list-text{
+    font-size: 1.2rem;
+}
+
+.history-user-icon{
+    margin-top: 10px!important;
+    margin-bottom: auto!important;
 }

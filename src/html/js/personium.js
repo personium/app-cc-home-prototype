@@ -104,9 +104,9 @@ $(function () {
         if (($(this).hasClass('edited'))) {
           $(this).removeClass('edited');
         }
-        a_tag.addClass('disabled');
+        
         $(this).addClass('editing');
-        visible_area.filter(":last").css('display', 'none');
+        $('.add-new-account').css('display', 'none');
         line_contents.addClass('edit-ic');
         wide_line.animate({
           'left': '0px'
@@ -117,7 +117,7 @@ $(function () {
         wide_line.animate({
           'left': '-70px'
         }, 500);
-        visible_area.filter(":last").css('display', 'block');
+        $('.add-new-account').css('display', 'block');
         line_contents.removeClass('edit-ic');
         line_contents.removeClass('clear-ic');
         a_tag.removeClass('disabled');
@@ -126,6 +126,7 @@ $(function () {
 
     /*Circle Delete Button Clicked(Page's List Left)*/
     $('.delete-check-btn').on('click', function () {
+      a_tag.addClass('disabled');
       $(this).parent().animate({
         'left': '-170px'
       }, 500);
